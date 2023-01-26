@@ -6,7 +6,8 @@
 
 body {
   background-image: url("./img/friend.jpg");
-  background-size: 1890px, 1700px;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 h1 {
