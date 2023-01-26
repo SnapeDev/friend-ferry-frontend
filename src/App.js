@@ -64,6 +64,8 @@ function App() {
           <Route path="calendar" />
         </Route>
       </Routes>
+
+      <Home />
     </div>
   );
 }

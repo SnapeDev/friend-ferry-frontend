@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("./img/friend.jpg");
+  background-size: 1890px, 1700px;
+}
+
+h1 {
+  font-size: 30px;
+  display: flex;
+  color: white;
+  width: 300px;
+  padding: 5px;
+  height: 10px;
+  border-radius: 10px;
+  padding-top: 200px;
+  flex-direction: column;
+}
+
+.main {
+  display: flex;
+
+  justify-content: flex-end;
+  padding-right: 200px;
+}
+
+.button {
+  background-color: #a91616;
+  border: none;
+  color: white;
+  padding: 5px 12px;
+  text-align: center;
+  text-decoration: none;
+  height: 50px;
+  font-size: 15px;
+  border-radius: 0.5px;
+}
