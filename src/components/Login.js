@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function Login({ setUser, setToken }) {
+export default function Login({ setUser, setToken, setIsAuth }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
@@ -31,6 +31,7 @@ export default function Login({ setUser, setToken }) {
       setIsLoading(false);
       // setUser(data);
       setToken(data.token);
+      setIsAuth(true);
     }
   };
 
@@ -51,7 +52,7 @@ export default function Login({ setUser, setToken }) {
         value={password}
       />
 
-      <button>Log in</button>
+      <button type="submit">Log in</button>
       {error && <div className="error">{error}</div>}
     </form>
   );

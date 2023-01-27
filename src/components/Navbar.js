@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
 import "./nav.css";
 
-export default function Navbar({ user, setUser }) {
+export default function Navbar({ user, isAuth, setToken, logout }) {
   const handleClick = () => {
     localStorage.removeItem("user");
-    setUser(null);
+    setToken(null);
+    logout();
   };
 
   return (
@@ -14,12 +15,12 @@ export default function Navbar({ user, setUser }) {
           <Link to="/">friend ferry</Link>
         </div>
         <ul>
-          {user && (
+          {isAuth && (
             <li>
               <p>Hi Jack!</p>
             </li>
           )}
-          {user ? (
+          {isAuth ? (
             <li>
               <button onClick={handleClick}>Log out</button>
             </li>
