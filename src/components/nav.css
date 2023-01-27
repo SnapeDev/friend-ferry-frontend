@@ -19,7 +19,9 @@
 nav {
   position: sticky;
   top: 0;
-  background-color: rgba(251, 251, 251, 0.901);
+
+  background-color: rgba(255, 255, 255, 0.911);
+
   display: flex;
   justify-content: space-between;
   /* padding: 10px 20px; */
