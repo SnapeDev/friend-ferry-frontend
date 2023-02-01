@@ -5,10 +5,7 @@ import Navbar from "./components/Navbar";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
 import Model from "./components/Model";
-// import { Model } from "./components/Model";
-
-// import ImageSlider from "./components/ImageSlider";
-// import { SliderData } from "./components/SliderData";
+import DateRangePicker from "./components/DateRangePicker";
 
 const verifyToken = () => {
   /* 
@@ -69,6 +66,10 @@ function App() {
           element={!isAuth ? <Navigate to="/signup" /> : <Outlet />}
         />
         <Route path="/model/:id" element={<Model />} />
+        <Route
+          path="/model/:id/DateRangePicker"
+          element={<DateRangePicker />}
+        />
       </Routes>
     </div>
   );

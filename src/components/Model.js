@@ -1,7 +1,8 @@
 import { useParams, useNavigate } from "react-router-dom";
-import { baptistetwoImg } from "./image";
 import { SliderData } from "./SliderData";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import Calendar from "./DateRangePicker";
 
 export default function Model() {
   const { id } = useParams();
@@ -11,29 +12,79 @@ export default function Model() {
   console.log("ID", oneModel);
   console.log(oneModel.image);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <section className="loco">
-      <p>{oneModel.location}</p>
+      <section className="about">
+        <div className="aboutContentWrapper">
+          <div className="modelAboutTitles">
+            <p>Name:</p>
+            <p className="">Location:</p>
+            <p className="">Age:</p>
+            <p className="">About:</p>
+          </div>
+          <div className="modelAboutContent">
+            <p>{oneModel.name}</p>
+            <p>{oneModel.location}</p>
+            <p>{oneModel.age}</p>
+            <p className="abouthim">{oneModel.about}</p>
+          </div>
+        </div>
+
+        {/* <p>
+          <span style={{ color: "salmon" }}>
+            <b>Name:</b>
+          </span>
+          {oneModel.name}
+        </p>
+
+        <p style={{ fontSize: 35 }}>
+          <span style={{ color: "salmon" }}>
+            <b>Location:</b>
+          </span>
+          {oneModel.location}
+        </p>
+
+        <p style={{ fontSize: 30 }}>
+          <span style={{ color: "salmon" }}>
+            <b>Age:</b>
+          </span>
+          {oneModel.age}
+        </p>
+        <p className="abouthim">
+          <span style={{ color: "salmon", fontSize: 25 }}>
+            <b>About:</b>
+          </span>
+          <span style={{ fontSize: 22, fontFamily: "Roboto" }}>
+            {oneModel.about}
+          </span>
+        </p> */}
+        <div className="smallImages">
+          {oneModel.image.map((oneImage, index) => (
+            <button
+              key={index}
+              className="modelImagesBtn"
+              onClick={() => setMainImage(oneModel.image[index])}
+            >
+              <img
+                width="150px"
+                height="auto"
+                className="modelImages"
+                src={oneImage}
+                alt={oneImage}
+              />
+            </button>
+          ))}
+        </div>
+      </section>
       <div className="model">
         <img src={mainImage} alt={oneModel.id} width="500px" height="auto" />
-        <button>Book!</button>
-      </div>
-      <div className="smallImages">
-        {oneModel.image.map((oneImage, index) => (
-          <button
-            key={index}
-            className="modelImagesBtn"
-            onClick={() => setMainImage(oneModel.image[index])}
-          >
-            <img
-              width="150px"
-              height="auto"
-              className="modelImages"
-              src={oneImage}
-              alt={oneImage}
-            />
-          </button>
-        ))}
+        <Link to="./Calendar">
+          <button className="bookme">Book me</button>
+        </Link>
       </div>
     </section>
   );

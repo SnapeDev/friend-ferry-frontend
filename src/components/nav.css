@@ -14,7 +14,7 @@
 }
 
 .title a {
-  color: rgb(255, 0, 0);
+  color: rgb(231, 62, 118);
   text-decoration: none;
 }
 
@@ -27,6 +27,8 @@ nav {
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
   align-items: center;
   height: 80px;
+  position: absolute;
+  width: 100%;
 }
 
 nav ul {
@@ -47,9 +49,9 @@ nav li p {
 }
 
 nav button {
-  background-color: rgb(255, 0, 0);
+  background-color: salmon;
   border: none;
-  color: black;
+  color: white;
   padding: 8px 12px;
   text-align: center;
   text-decoration: none;
@@ -58,15 +60,16 @@ nav button {
   margin: 4px 2px;
   cursor: pointer;
   transition: background-color 0.2s ease-in-out;
+  border-radius: 4px;
 }
 
 nav button:hover {
-  background-color: white;
+  background-color: salmon;
   color: black;
 }
 
 nav button a {
-  color: black;
+  color: white;
   text-decoration: none;
 }
 

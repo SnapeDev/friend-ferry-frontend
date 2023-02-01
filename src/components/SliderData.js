@@ -74,6 +74,14 @@ export const SliderData = [
     name: "Baptiste",
     age: 29,
     id: 1,
+    about: (
+      <i>
+        <b>
+          "Ben based out of London enjoys horse racing, tea and cake, reading
+          and going to social events."
+        </b>
+      </i>
+    ),
     location: "Hamburg",
     image: [baptisteImg, baptistetwoImg, baptistethreeImg, baptistefourImg],
   },
@@ -82,6 +90,14 @@ export const SliderData = [
     name: "Barry",
     age: 34,
     id: 2,
+    about: (
+      <i>
+        <b>
+          "Ben based out of London enjoys horse racing, tea and cake, reading
+          and going to social events."
+        </b>
+      </i>
+    ),
     location: "Munich",
     image: [barryImg, barrytwoImg, barrythreeImg, barryfourImg],
   },
@@ -90,6 +106,14 @@ export const SliderData = [
     name: "Bart",
     age: 28,
     id: 3,
+    about: (
+      <i>
+        <b>
+          "Ben based out of London enjoys horse racing, tea and cake, reading
+          and going to social events."
+        </b>
+      </i>
+    ),
     location: "Hanover",
     image: [bartImg, barttwoImg, bartthreeImg, bartfourImg],
   },
@@ -98,6 +122,14 @@ export const SliderData = [
     name: "Ben",
     age: 25,
     id: 4,
+    about: (
+      <i>
+        <b>
+          "Ben based out of London enjoys horse racing, tea and cake, reading
+          and going to social events."
+        </b>
+      </i>
+    ),
     location: "London",
     image: [benImg, bentwoImg, benthreeImg, benfourImg],
   },
@@ -106,6 +138,14 @@ export const SliderData = [
     name: "Chris",
     age: 27,
     id: 5,
+    about: (
+      <i>
+        <b>
+          "Ben based out of London enjoys horse racing, tea and cake, reading
+          and going to social events."
+        </b>
+      </i>
+    ),
     location: "Manchester",
     image: [chrisImg, christwoImg, christhreeImg, chrisfourImg],
   },
@@ -114,6 +154,14 @@ export const SliderData = [
     name: "Craig",
     age: 26,
     id: 6,
+    about: (
+      <i>
+        <b>
+          "Ben based out of London enjoys horse racing, tea and cake, reading
+          and going to social events."
+        </b>
+      </i>
+    ),
     location: "Paris",
     image: [craigImg, craigtwoImg, craigthreeImg, craigfourImg],
   },
@@ -122,6 +170,14 @@ export const SliderData = [
     name: "Emanuel",
     age: 30,
     id: 7,
+    about: (
+      <i>
+        <b>
+          "Ben based out of London enjoys horse racing, tea and cake, reading
+          and going to social events."
+        </b>
+      </i>
+    ),
     location: "Milan",
     image: [emanuelImg, emanueltwoImg, emanuelthreeImg, emanuelfourImg],
   },
@@ -130,6 +186,14 @@ export const SliderData = [
     name: "Florent",
     age: 33,
     id: 8,
+    about: (
+      <i>
+        <b>
+          "Ben based out of London enjoys horse racing, tea and cake, reading
+          and going to social events."
+        </b>
+      </i>
+    ),
     location: "Paris",
     image: [florentImg, florenttwoImg, florentthreeImg, florentfourImg],
   },
@@ -138,6 +202,14 @@ export const SliderData = [
     name: "Jens",
     age: 29,
     id: 9,
+    about: (
+      <i>
+        <b>
+          "Ben based out of London enjoys horse racing, tea and cake, reading
+          and going to social events."
+        </b>
+      </i>
+    ),
     location: "Stockholm",
     image: [jensImg, jenstwoImg, jensthreeImg, jensfourImg],
   },
@@ -146,6 +218,14 @@ export const SliderData = [
     name: "Justin",
     age: 30,
     id: 10,
+    about: (
+      <i>
+        <b>
+          "Ben based out of London enjoys horse racing, tea and cake, reading
+          and going to social events."
+        </b>
+      </i>
+    ),
     location: "New York",
     image: [justinImg, justintwoImg, justinthreeImg, justinfourImg],
   },
@@ -154,6 +234,14 @@ export const SliderData = [
     name: "Lucas",
     age: 30,
     id: 11,
+    about: (
+      <i>
+        <b>
+          "Ben based out of London enjoys horse racing, tea and cake, reading
+          and going to social events."
+        </b>
+      </i>
+    ),
     location: "Lisbon",
     image: [lucasImg, lucastwoImg, lucasthreeImg, lucasfourImg],
   },
@@ -162,6 +250,14 @@ export const SliderData = [
     name: "Matt",
     age: 32,
     id: 12,
+    about: (
+      <i>
+        <b>
+          "Ben based out of London enjoys horse racing, tea and cake, reading
+          and going to social events."
+        </b>
+      </i>
+    ),
     location: "London",
     image: [mattImg, matttwoImg, mattthreeImg, mattfourImg],
   },
@@ -170,6 +266,14 @@ export const SliderData = [
     name: "Mattia",
     age: 27,
     id: 13,
+    about: (
+      <i>
+        <b>
+          "Ben based out of London enjoys horse racing, tea and cake, reading
+          and going to social events."
+        </b>
+      </i>
+    ),
     location: "Hamburg",
     image: [mattiaImg, mattiatwoImg, mattiathreeImg, mattiafourImg],
   },
@@ -178,6 +282,14 @@ export const SliderData = [
     name: "Niko",
     age: 35,
     id: 14,
+    about: (
+      <i>
+        <b>
+          "Ben based out of London enjoys horse racing, tea and cake, reading
+          and going to social events."
+        </b>
+      </i>
+    ),
     location: "Paris",
     image: [nikoImg, nikotwoImg, nikothreeImg, nikofourImg],
   },
@@ -186,6 +298,14 @@ export const SliderData = [
     name: "Nuno",
     age: 34,
     id: 15,
+    about: (
+      <i>
+        <b>
+          "Ben based out of London enjoys horse racing, tea and cake, reading
+          and going to social events."
+        </b>
+      </i>
+    ),
     location: "Madrid",
     image: [nunoImg, nunotwoImg, nunothreeImg, nunofourImg],
   },
@@ -194,6 +314,14 @@ export const SliderData = [
     name: "Pat",
     age: 34,
     id: 16,
+    about: (
+      <i>
+        <b>
+          "Ben based out of London enjoys horse racing, tea and cake, reading
+          and going to social events."
+        </b>
+      </i>
+    ),
     location: "Birmingham",
     image: [patImg, pattwoImg, patthreeImg, patfourImg],
   },
@@ -202,7 +330,15 @@ export const SliderData = [
     name: "Rich",
     age: 41,
     id: 18,
-    location: "San Fransico",
+    about: (
+      <i>
+        <b>
+          "Ben based out of London enjoys horse racing, tea and cake, reading
+          and going to social events."
+        </b>
+      </i>
+    ),
+    location: "Texas",
     image: [richImg, richtwoImg, richthreeImg, richfourImg],
   },
 ];

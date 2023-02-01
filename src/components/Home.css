@@ -156,7 +156,7 @@ h1 {
 }
 
 .button {
-  background-color: #a91616;
+  background-color: salmon;
   border: none;
   color: white;
   padding: 5px 12px;
@@ -185,11 +185,15 @@ h1 {
 }
 
 .titleWrapper h1 {
+  color: whitesmoke;
   margin: 0 40% 30px 0;
+  padding-left: 100px;
 }
 
 .titleWrapper button {
   width: fit-content;
+
+  margin-left: 150px;
 }
 
 .compan {
@@ -229,35 +233,119 @@ h1 {
   align-items: center;
 }
 
-.model {
-  padding: 0 10px;
-  flex-direction: column;
+.loco {
+  /* height: 600px; */
+  width: 100vw;
   display: flex;
+  /* flex-direction: column; */
+  /* align-items: flex-end; */
+  justify-content: center;
+  /* padding-bottom: 500px; */
+  /* padding-right: 200px; */
+  margin-top: 80px;
+  padding: 4% 0;
+  /* padding: 0 10vw 0; */
 }
 
-.loco {
-  height: 1000px;
-  width: auto;
+.model {
+  padding: 0 10px;
   display: flex;
+
+  align-items: center;
+  /* position: relative; */
   flex-direction: column;
-  align-items: flex-end;
-  justify-content: center;
-  padding-bottom: 500px;
-  padding-right: 200px;
-  margin-top: 10%;
 }
+
 .smallImages {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  /* position: absolute; */
+  padding-top: 10vh;
 }
+
 .modelImagesBtn {
   background: none;
+
   border: none;
   padding: 0;
   margin: 1%;
   width: 130px;
   height: auto;
   cursor: pointer;
+}
+
+.modelImages {
+  border-radius: 5px;
+}
+
+.about {
+  display: flex;
+  font-size: 35px;
+  width: 60%;
+  /* height: 810px; */
+  /* position: absolute; */
+  flex-direction: column;
+  justify-content: center;
+  /* padding-top: 95px; */
+  /* padding-left: 500px; */
+  align-items: flex-start;
+  margin: 100px 0;
+  line-height: 3rem;
+}
+
+.name {
+  display: flex;
+  font-size: 50px;
+}
+
+.aboutme {
+  font-size: 20px;
+}
+
+.abouthim {
+  font-size: 22px;
+}
+
+.bookme {
+  background-color: salmon;
+  border: none;
+  color: white;
+  padding: 5px 12px;
+  text-align: center;
+  text-decoration: none;
+  height: 50px;
+  font-size: 15px;
+  border-radius: 5px;
+  /* width: 30%; */
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+.aboutContentWrapper {
+  display: flex;
+}
+
+.modelAboutTitles {
+  color: salmon;
+  text-align: right;
+  margin-right: 5%;
+}
+
+.calendar {
+  width: 30%;
+}
+
+.call {
+  width: 100vw;
+  display: flex;
+  /* flex-direction: column; */
+  /* align-items: flex-end; */
+  justify-content: center;
+  /* padding-bottom: 500px; */
+  /* padding-right: 200px; */
+  margin-top: 80px;
+  padding: 4% 0;
+  /* padding: 0 10vw 0; */
 }
