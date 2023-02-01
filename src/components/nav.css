@@ -1,6 +1,8 @@
 .container {
   display: flex;
   flex-direction: column;
+  position: fixed;
+  width: 100vw;
 }
 
 .title {
@@ -12,12 +14,11 @@
 }
 
 .title a {
-  color: rgb(255, 60, 0);
+  color: rgb(255, 0, 0);
   text-decoration: none;
 }
 
 nav {
-  position: sticky;
   top: 0;
   background-color: rgba(251, 251, 251, 0.901);
   display: flex;
@@ -46,7 +47,7 @@ nav li p {
 }
 
 nav button {
-  background-color: #ffc107;
+  background-color: rgb(255, 0, 0);
   border: none;
   color: black;
   padding: 8px 12px;

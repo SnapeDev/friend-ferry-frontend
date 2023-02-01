@@ -4,8 +4,11 @@ import Home from "./components/Home";
 import Navbar from "./components/Navbar";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
-import ImageSlider from "./components/ImageSlider";
-import { SliderData } from "./components/SliderData";
+import Model from "./components/Model";
+// import { Model } from "./components/Model";
+
+// import ImageSlider from "./components/ImageSlider";
+// import { SliderData } from "./components/SliderData";
 
 const verifyToken = () => {
   /* 
@@ -64,12 +67,8 @@ function App() {
         <Route
           path="auth"
           element={!isAuth ? <Navigate to="/signup" /> : <Outlet />}
-        >
-          <Route path="calendar" />
-          <Route path="calendar" />
-          <Route path="calendar" />
-          <Route path="calendar" />
-        </Route>
+        />
+        <Route path="/model/:id" element={<Model />} />
       </Routes>
     </div>
   );
