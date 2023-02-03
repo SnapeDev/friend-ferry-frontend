@@ -5,8 +5,8 @@ import Navbar from "./components/Navbar";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
 import Model from "./components/Model";
-// import Calendar from "./components/Calendar";
 import BookModel from "./components/BookModel";
+import Payment from "./components/Payment";
 
 const verifyToken = () => {
   /* 
@@ -73,6 +73,7 @@ function App() {
           path="/model/:id/book-model"
           element={<BookModel isAuth={isAuth} />}
         />
+        <Route path="/payment" element={<Payment />} />
       </Routes>
     </div>
   );

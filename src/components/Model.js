@@ -1,15 +1,12 @@
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { SliderData } from "./SliderData";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 export default function Model() {
   const { id } = useParams();
-  const navigate = useNavigate();
   const oneModel = SliderData.find((model) => model.id === Number(id));
   const [mainImage, setMainImage] = useState(oneModel.image[0]);
-  console.log("ID", oneModel);
-  console.log(oneModel.image);
 
   useEffect(() => {
     window.scrollTo(0, 0);

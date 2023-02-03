@@ -8,13 +8,16 @@ import "react-datepicker/dist/react-datepicker.css";
 
 const BookModel = ({ isAuth }) => {
   const navigate = useNavigate();
-  const [startDate, setStartDate] = useState();
+  // const [startDate, setStartDate] = useState();
   // const [name, setName] = useState("");
   // const [hours, setHours] = useState();
   // const [minutes, setMinutes] = useState("");
   const [input, setInput] = useState({
     name: "",
+    event: "",
     location: "",
+    datetime: new Date(),
+    amout: 0,
   });
 
   useEffect(() => {
@@ -30,12 +33,27 @@ const BookModel = ({ isAuth }) => {
       [evt.target.name]: value,
     });
   };
-  const handleSubmit = (event) => {
-    console.log("input", input);
-    event.preventDefault();
+
+  const handleDateChange = (date) => {
+    if (!date) {
+      return;
+    }
+
+    // making a calculation of the rate
+    const amount = hourRate;
+    setInput((prev) => {
+      return { ...prev, datetime: date, amount };
+    });
   };
 
-  const hour = moment(startDate).format("hh");
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    // we would also need to validate the input before redirecting
+
+    navigate("/payment", { state: input });
+  };
+
+  // const hour = moment(startDate).format("hh");
   const hourRate = 200;
 
   return (
@@ -54,8 +72,8 @@ const BookModel = ({ isAuth }) => {
             Date of booking:
             <DatePicker
               // className="datepick"
-              selected={startDate}
-              onChange={(date) => setStartDate(date)}
+              selected={input.datetime}
+              onChange={handleDateChange}
               showTimeSelect
               timeIntervals={60}
               // minTime={setHours(setMinutes(new Date(), 0), 17)}
