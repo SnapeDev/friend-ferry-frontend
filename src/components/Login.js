@@ -25,35 +25,36 @@ export default function Login({ setUser, setToken, setIsAuth }) {
       setError(data.error);
     }
 
-    if (response.ok) {
-      // localStorage.setItem("user", JSON.stringify(data));
-      localStorage.setItem("token", data.token);
-      setIsLoading(false);
-      // setUser(data);
-      setToken(data.token);
-      setIsAuth(true);
-    }
+    // localStorage.setItem("user", JSON.stringify(data));
+    localStorage.setItem("token", data.token);
+    setIsLoading(false);
+    // setUser(data);
+    setToken(data.token);
+    setIsAuth(true);
   };
 
   return (
     <div className="logme">
       <form className="login" onSubmit={handleSubmit}>
-        <h3>Log in</h3>
-        <label>email: </label>
+        <h1 className="logged">Log in</h1>
+        <br />
+        <label>Email: </label>
         <input
           type="email"
           onChange={(e) => setEmail(e.target.value)}
           value={email}
         />
 
-        <label>password: </label>
+        <label>Password: </label>
         <input
           type="password"
           onChange={(e) => setPassword(e.target.value)}
           value={password}
         />
 
-        <button type="submit">Log in</button>
+        <button className="logger" type="submit">
+          Log in
+        </button>
         {error && <div className="error">{error}</div>}
       </form>
     </div>

@@ -5,7 +5,8 @@ import Navbar from "./components/Navbar";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
 import Model from "./components/Model";
-import DateRangePicker from "./components/DateRangePicker";
+// import Calendar from "./components/Calendar";
+import BookModel from "./components/BookModel";
 
 const verifyToken = () => {
   /* 
@@ -25,8 +26,10 @@ function App() {
   const [token, setToken] = useState(localStorage.getItem("token"));
 
   useEffect(() => {
-    token && verifyToken();
-    token && setIsAuth(true);
+    if (token) {
+      verifyToken();
+      setIsAuth(true);
+    }
   }, [token]);
 
   // useEffect(() => {
@@ -67,8 +70,8 @@ function App() {
         />
         <Route path="/model/:id" element={<Model />} />
         <Route
-          path="/model/:id/DateRangePicker"
-          element={<DateRangePicker />}
+          path="/model/:id/book-model"
+          element={<BookModel isAuth={isAuth} />}
         />
       </Routes>
     </div>

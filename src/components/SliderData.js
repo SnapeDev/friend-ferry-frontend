@@ -314,6 +314,7 @@ export const SliderData = [
     name: "Pat",
     age: 34,
     id: 16,
+    events: "Weddings, Social events, Cocktails",
     about: (
       <i>
         <b>

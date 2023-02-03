@@ -38,42 +38,46 @@ export default function Signup({ setUser, setToken }) {
   };
 
   return (
-    <div className="signme">
+    <div className="signs">
       <form className="signup" onSubmit={handleSubmit}>
-        <h3>Sign up</h3>
-        <label>Name </label>
+        <h1 className="join">Sign up </h1>
+        <br />
+        <label>Name: </label>
         <input
           type="text"
           onChange={(e) => setName(e.target.value)}
           value={name}
         />
-        <label>last name </label>
+
+        <label>Last Name: </label>
         <input
           type="text"
           onChange={(e) => setLastName(e.target.value)}
           value={lastName}
         />
-        <label>age </label>
+        <br />
+        <label>Age: </label>
         <input
           type="number"
           onChange={(e) => setAge(e.target.value)}
           value={age}
         />
-        <label>email: </label>
+        <br />
+        <label>Email: </label>
         <input
           type="email"
           onChange={(e) => setEmail(e.target.value)}
           value={email}
         />
 
-        <label>password: </label>
+        <label>Password: </label>
         <input
           type="password"
           onChange={(e) => setPassword(e.target.value)}
           value={password}
         />
 
-        <button>Sign up</button>
+        <button className="up">Sign up</button>
         {error && <div className="error">{error}</div>}
       </form>
     </div>

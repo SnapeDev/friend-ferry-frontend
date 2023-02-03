@@ -1,6 +1,5 @@
 import "./Home.css";
-
-import { SliderData } from "./SliderData";
+import { Link } from "react-router-dom";
 import SimplyCarousel from "./SimplyCarousel";
 
 const Home = () => {
@@ -8,13 +7,17 @@ const Home = () => {
     <main className="mainHome">
       <section className="welcome">
         <div className="titleWrapper">
-          <h1>
-            Welcome to Friend Ferry, where companionship and social connections
-            are just a click away. Our selection of local companions are perfect
-            for walks, dates, and social events. Join us and make lasting
-            memories today.
-          </h1>
-          <button className="button">Join Now</button>
+          <strong>
+            <h1>
+              Welcome to Friend Ferry, where companionship and social
+              connections are just a click away. Our selection of local
+              companions are perfect for walks, dates, and social events. Join
+              us and make lasting memories today.
+            </h1>
+          </strong>
+          <Link to="./signup">
+            <button className="button">Join Now</button>
+          </Link>
         </div>
       </section>
 

@@ -2,7 +2,6 @@ import { useParams, useNavigate } from "react-router-dom";
 import { SliderData } from "./SliderData";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import Calendar from "./DateRangePicker";
 
 export default function Model() {
   const { id } = useParams();
@@ -24,12 +23,14 @@ export default function Model() {
             <p>Name:</p>
             <p className="">Location:</p>
             <p className="">Age:</p>
+            <p className="">Events:</p>
             <p className="">About:</p>
           </div>
           <div className="modelAboutContent">
             <p>{oneModel.name}</p>
             <p>{oneModel.location}</p>
             <p>{oneModel.age}</p>
+            <p>{oneModel.events}</p>
             <p className="abouthim">{oneModel.about}</p>
           </div>
         </div>
@@ -82,7 +83,7 @@ export default function Model() {
       </section>
       <div className="model">
         <img src={mainImage} alt={oneModel.id} width="500px" height="auto" />
-        <Link to="./Calendar">
+        <Link to="./book-model">
           <button className="bookme">Book me</button>
         </Link>
       </div>
