@@ -28,9 +28,9 @@
   margin: 5px;
 }
 
-@media screen and (max-width: 720px) {
-  .sub {
-    flex-direction: column;
+@media screen and (max-width: 500px) {
+  .sub .footer {
+    display: block;
   }
 }
 
