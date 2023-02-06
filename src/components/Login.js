@@ -1,10 +1,12 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-export default function Login({ setUser, setToken, setIsAuth }) {
+export default function Login({ setUser }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -12,11 +14,14 @@ export default function Login({ setUser, setToken, setIsAuth }) {
     setIsLoading(true);
     setError(null);
 
-    const response = await fetch("http://localhost:8080/users/login", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email, password }),
-    });
+    const response = await fetch(
+      "https://friend-ferry.onrender.com/users/login",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, password }),
+      }
+    );
 
     const data = await response.json();
 
@@ -24,13 +29,12 @@ export default function Login({ setUser, setToken, setIsAuth }) {
       setIsLoading(false);
       setError(data.error);
     }
-
-    // localStorage.setItem("user", JSON.stringify(data));
-    localStorage.setItem("token", data.token);
-    setIsLoading(false);
-    // setUser(data);
-    setToken(data.token);
-    setIsAuth(true);
+    if (response.ok) {
+      localStorage.setItem("user", JSON.stringify(data));
+      // localStorage.setItem("token", data.token);
+      setIsLoading(false);
+      setUser(data);
+    }
   };
 
   return (
@@ -51,10 +55,16 @@ export default function Login({ setUser, setToken, setIsAuth }) {
           onChange={(e) => setPassword(e.target.value)}
           value={password}
         />
-
-        <button className="logger" type="submit">
-          Log in
-        </button>
+        {/* <div className="logya"> */}
+        {/* <button className="backlog" onClick={() => navigate(-1)}>
+            Back
+          </button> */}
+        <div className="logya">
+          <button className="logger" type="submit">
+            Log in
+          </button>
+        </div>
+        {/* </div> */}
         {error && <div className="error">{error}</div>}
       </form>
     </div>

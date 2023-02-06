@@ -1,6 +1,7 @@
 import "./Home.css";
 import { Link } from "react-router-dom";
 import SimplyCarousel from "./SimplyCarousel";
+import Footer from "./Footer";
 
 const Home = () => {
   return (
@@ -26,6 +27,7 @@ const Home = () => {
         <SimplyCarousel />
         {/* <PictureSlider />; */}
       </section>
+      <Footer />
     </main>
   );
 };

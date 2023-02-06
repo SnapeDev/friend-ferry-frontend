@@ -66,6 +66,7 @@ import richImg from "./Rich.jpg";
 import richtwoImg from "./Richtwo.jpg";
 import richthreeImg from "./Richthree.jpg";
 import richfourImg from "./Richfour.jpg";
+import instaImg from "./insta.jpg";
 
 export {
   baptisteImg,
@@ -136,4 +137,5 @@ export {
   richtwoImg,
   richthreeImg,
   richfourImg,
+  instaImg,
 };

@@ -67,18 +67,95 @@ import {
   richtwoImg,
   richthreeImg,
   richfourImg,
+  instaImg,
 } from "./image";
 
+export const InstaData = [
+  {
+    id: 30,
+    image: [instaImg],
+  },
+];
+
 export const SliderData = [
+  {
+    name: "Matt",
+    age: 32,
+    id: 12,
+    events: "Coffee, Social events, Cocktails",
+    about: (
+      <i>
+        <b>
+          "Matt based out of London enjoys horse racing, tea and cake, reading
+          and going to social events."
+        </b>
+      </i>
+    ),
+    location: "London",
+    image: [mattImg, matttwoImg, mattthreeImg, mattfourImg],
+  },
+
+  {
+    name: "Mattia",
+    age: 27,
+    id: 13,
+    events: "Coffee, Social events, Cocktails",
+    about: (
+      <i>
+        <b>
+          "Mattia based out of Hamburg enjoys horse racing, tea and cake,
+          reading and going to social events."
+        </b>
+      </i>
+    ),
+    location: "Hamburg",
+    image: [mattiaImg, mattiatwoImg, mattiathreeImg, mattiafourImg],
+  },
+
+  {
+    name: "Niko",
+    age: 35,
+    id: 14,
+    events: "Coffee, Social events, Cocktails",
+    about: (
+      <i>
+        <b>
+          "Niko based out of Paris enjoys horse racing, tea and cake, reading
+          and going to social events."
+        </b>
+      </i>
+    ),
+    location: "Paris",
+    image: [nikoImg, nikotwoImg, nikothreeImg, nikofourImg],
+  },
+
+  {
+    name: "Nuno",
+    age: 34,
+    id: 15,
+    events: "Coffee, Social events, Cocktails",
+    about: (
+      <i>
+        <b>
+          "Nuno based out of Madrid enjoys horse racing, tea and cake, reading
+          and going to social events."
+        </b>
+      </i>
+    ),
+    location: "Madrid",
+    image: [nunoImg, nunotwoImg, nunothreeImg, nunofourImg],
+  },
+
   {
     name: "Baptiste",
     age: 29,
     id: 1,
+    events: "Coffee, Social events, Cocktails",
     about: (
       <i>
         <b>
-          "Ben based out of London enjoys horse racing, tea and cake, reading
-          and going to social events."
+          "Baptiste based out of Hamburg enjoys horse racing, tea and cake,
+          reading and going to social events."
         </b>
       </i>
     ),
@@ -90,10 +167,11 @@ export const SliderData = [
     name: "Barry",
     age: 34,
     id: 2,
+    events: "Coffee, Social events, Cocktails",
     about: (
       <i>
         <b>
-          "Ben based out of London enjoys horse racing, tea and cake, reading
+          "Barry based out of Munich enjoys horse racing, tea and cake, reading
           and going to social events."
         </b>
       </i>
@@ -106,10 +184,11 @@ export const SliderData = [
     name: "Bart",
     age: 28,
     id: 3,
+    events: "Coffee, Social events, Cocktails",
     about: (
       <i>
         <b>
-          "Ben based out of London enjoys horse racing, tea and cake, reading
+          "Bart based out of Hanover enjoys horse racing, tea and cake, reading
           and going to social events."
         </b>
       </i>
@@ -122,6 +201,7 @@ export const SliderData = [
     name: "Ben",
     age: 25,
     id: 4,
+    events: "Coffee, Social events, Cocktails",
     about: (
       <i>
         <b>
@@ -138,11 +218,12 @@ export const SliderData = [
     name: "Chris",
     age: 27,
     id: 5,
+    events: "Coffee, Social events, Cocktails",
     about: (
       <i>
         <b>
-          "Ben based out of London enjoys horse racing, tea and cake, reading
-          and going to social events."
+          "Chris based out of Manchester enjoys horse racing, tea and cake,
+          reading and going to social events."
         </b>
       </i>
     ),
@@ -154,10 +235,11 @@ export const SliderData = [
     name: "Craig",
     age: 26,
     id: 6,
+    events: "Coffee, Social events, Cocktails",
     about: (
       <i>
         <b>
-          "Ben based out of London enjoys horse racing, tea and cake, reading
+          "Craig based out of Paris enjoys horse racing, tea and cake, reading
           and going to social events."
         </b>
       </i>
@@ -170,10 +252,11 @@ export const SliderData = [
     name: "Emanuel",
     age: 30,
     id: 7,
+    events: "Coffee, Social events, Cocktails",
     about: (
       <i>
         <b>
-          "Ben based out of London enjoys horse racing, tea and cake, reading
+          "Emanuel based out of Milan enjoys horse racing, tea and cake, reading
           and going to social events."
         </b>
       </i>
@@ -186,10 +269,11 @@ export const SliderData = [
     name: "Florent",
     age: 33,
     id: 8,
+    events: "Coffee, Social events, Cocktails",
     about: (
       <i>
         <b>
-          "Ben based out of London enjoys horse racing, tea and cake, reading
+          "Florent based out of Paris enjoys horse racing, tea and cake, reading
           and going to social events."
         </b>
       </i>
@@ -202,11 +286,12 @@ export const SliderData = [
     name: "Jens",
     age: 29,
     id: 9,
+    events: "Coffee, Social events, Cocktails",
     about: (
       <i>
         <b>
-          "Ben based out of London enjoys horse racing, tea and cake, reading
-          and going to social events."
+          "Jens based out of Stockholm enjoys Theatre, tea and cake, reading and
+          going to social events."
         </b>
       </i>
     ),
@@ -218,11 +303,12 @@ export const SliderData = [
     name: "Justin",
     age: 30,
     id: 10,
+    events: "Coffee, Social events, Cocktails",
     about: (
       <i>
         <b>
-          "Ben based out of London enjoys horse racing, tea and cake, reading
-          and going to social events."
+          "Justin based out of New York enjoys Comedy shows, coffee, reading and
+          going to social events."
         </b>
       </i>
     ),
@@ -234,11 +320,12 @@ export const SliderData = [
     name: "Lucas",
     age: 30,
     id: 11,
+    events: "Coffee, Social events, Cocktails",
     about: (
       <i>
         <b>
-          "Ben based out of London enjoys horse racing, tea and cake, reading
-          and going to social events."
+          "Lucas based out of Lisbon enjoys Surfing, coffee, reading and going
+          to social events."
         </b>
       </i>
     ),
@@ -247,79 +334,15 @@ export const SliderData = [
   },
 
   {
-    name: "Matt",
-    age: 32,
-    id: 12,
-    about: (
-      <i>
-        <b>
-          "Ben based out of London enjoys horse racing, tea and cake, reading
-          and going to social events."
-        </b>
-      </i>
-    ),
-    location: "London",
-    image: [mattImg, matttwoImg, mattthreeImg, mattfourImg],
-  },
-
-  {
-    name: "Mattia",
-    age: 27,
-    id: 13,
-    about: (
-      <i>
-        <b>
-          "Ben based out of London enjoys horse racing, tea and cake, reading
-          and going to social events."
-        </b>
-      </i>
-    ),
-    location: "Hamburg",
-    image: [mattiaImg, mattiatwoImg, mattiathreeImg, mattiafourImg],
-  },
-
-  {
-    name: "Niko",
-    age: 35,
-    id: 14,
-    about: (
-      <i>
-        <b>
-          "Ben based out of London enjoys horse racing, tea and cake, reading
-          and going to social events."
-        </b>
-      </i>
-    ),
-    location: "Paris",
-    image: [nikoImg, nikotwoImg, nikothreeImg, nikofourImg],
-  },
-
-  {
-    name: "Nuno",
-    age: 34,
-    id: 15,
-    about: (
-      <i>
-        <b>
-          "Ben based out of London enjoys horse racing, tea and cake, reading
-          and going to social events."
-        </b>
-      </i>
-    ),
-    location: "Madrid",
-    image: [nunoImg, nunotwoImg, nunothreeImg, nunofourImg],
-  },
-
-  {
     name: "Pat",
     age: 34,
     id: 16,
-    events: "Weddings, Social events, Cocktails",
+    events: "Coffee, Social events, Cocktails",
     about: (
       <i>
         <b>
-          "Ben based out of London enjoys horse racing, tea and cake, reading
-          and going to social events."
+          "Pat based out of Birmingham enjoys playing Piano, tea and cake,
+          reading and going to social events."
         </b>
       </i>
     ),
@@ -331,10 +354,11 @@ export const SliderData = [
     name: "Rich",
     age: 41,
     id: 18,
+    events: "Coffee, Social events, Cocktails",
     about: (
       <i>
         <b>
-          "Ben based out of London enjoys horse racing, tea and cake, reading
+          "Rich based out of Texas enjoys horse racing, tea and cake, reading
           and going to social events."
         </b>
       </i>

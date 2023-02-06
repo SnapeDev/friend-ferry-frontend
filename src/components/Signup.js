@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function Signup({ setUser, setToken }) {
+export default function Signup({ setUser }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
@@ -15,11 +15,14 @@ export default function Signup({ setUser, setToken }) {
     setIsLoading(true);
     setError(null);
 
-    const response = await fetch("http://localhost:8080/users/signup", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ name, lastName, age, email, password }),
-    });
+    const response = await fetch(
+      "https://friend-ferry.onrender.com/users/signup",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, lastName, age, email, password }),
+      }
+    );
 
     const data = await response.json();
 
@@ -29,11 +32,9 @@ export default function Signup({ setUser, setToken }) {
     }
 
     if (response.ok) {
-      // localStorage.setItem("user", JSON.stringify(data));
-      localStorage.setItem("token", data.token);
+      localStorage.setItem("user", JSON.stringify(data));
       setIsLoading(false);
       setUser(data);
-      setToken(data.token);
     }
   };
 
@@ -76,8 +77,9 @@ export default function Signup({ setUser, setToken }) {
           onChange={(e) => setPassword(e.target.value)}
           value={password}
         />
-
-        <button className="up">Sign up</button>
+        <div className="signya">
+          <button className="up">Sign up</button>
+        </div>
         {error && <div className="error">{error}</div>}
       </form>
     </div>

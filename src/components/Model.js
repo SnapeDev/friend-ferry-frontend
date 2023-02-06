@@ -2,11 +2,14 @@ import { useParams } from "react-router-dom";
 import { SliderData } from "./SliderData";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export default function Model() {
   const { id } = useParams();
+  console.log(typeof id);
   const oneModel = SliderData.find((model) => model.id === Number(id));
   const [mainImage, setMainImage] = useState(oneModel.image[0]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -31,35 +34,6 @@ export default function Model() {
             <p className="abouthim">{oneModel.about}</p>
           </div>
         </div>
-
-        {/* <p>
-          <span style={{ color: "salmon" }}>
-            <b>Name:</b>
-          </span>
-          {oneModel.name}
-        </p>
-
-        <p style={{ fontSize: 35 }}>
-          <span style={{ color: "salmon" }}>
-            <b>Location:</b>
-          </span>
-          {oneModel.location}
-        </p>
-
-        <p style={{ fontSize: 30 }}>
-          <span style={{ color: "salmon" }}>
-            <b>Age:</b>
-          </span>
-          {oneModel.age}
-        </p>
-        <p className="abouthim">
-          <span style={{ color: "salmon", fontSize: 25 }}>
-            <b>About:</b>
-          </span>
-          <span style={{ fontSize: 22, fontFamily: "Roboto" }}>
-            {oneModel.about}
-          </span>
-        </p> */}
         <div className="smallImages">
           {oneModel.image.map((oneImage, index) => (
             <button
@@ -80,16 +54,21 @@ export default function Model() {
       </section>
       <div className="model">
         <img src={mainImage} alt={oneModel.id} width="500px" height="auto" />
-        <Link to="./book-model">
-          <button className="bookme">Book me</button>
-        </Link>
+        <div className="next">
+          <button className="bookhim" onClick={() => navigate(-1)}>
+            Back
+          </button>
+          <br />
+          <Link to="./book-model">
+            <button className="bookme">Book me</button>
+          </Link>
+        </div>
+
+        {/* <button onClick={() => navigate(-1)}>prev</button>
+        <button onClick={() => navigate(`/model/${parseInt(id, 10)}`)}>
+          next
+        </button> */}
       </div>
     </section>
   );
 }
-
-// create a piece of state that contains a src for an image
-
-// onClick on one of the images set the state to contain the source for that image that was clicked on. The source of the event can be targeted by the event target.
-
-// Display the state in bigger image as the source property.

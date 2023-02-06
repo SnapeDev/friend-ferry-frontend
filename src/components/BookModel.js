@@ -2,11 +2,17 @@ import { useNavigate } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import DatePicker from "react-datepicker";
 import moment from "moment";
+import { useParams } from "react-router-dom";
+import { SliderData } from "./SliderData";
+
 // import { useForm } from "react-hook-form";
 
 import "react-datepicker/dist/react-datepicker.css";
 
-const BookModel = ({ isAuth }) => {
+const BookModel = ({ user }) => {
+  const { id } = useParams();
+  const oneModel = SliderData.find((model) => model.id === Number(id));
+  const [mainImage, setMainImage] = useState(oneModel.image[1]);
   const navigate = useNavigate();
   // const [startDate, setStartDate] = useState();
   // const [name, setName] = useState("");
@@ -21,7 +27,7 @@ const BookModel = ({ isAuth }) => {
   });
 
   useEffect(() => {
-    if (!isAuth) {
+    if (!user) {
       navigate("/login");
     }
   }, []);
@@ -59,7 +65,7 @@ const BookModel = ({ isAuth }) => {
   return (
     <section className="call">
       <form className="myform" onSubmit={handleSubmit}>
-        <h1 className="confirm">Book Companion:</h1> <br />
+        <h1 className="confirm">Book {oneModel.name}:</h1> <br />
         <label>Name</label>
         <input name="name" value={input.name} onChange={handleChange} /> <br />
         <label>Location</label>
@@ -86,8 +92,19 @@ const BookModel = ({ isAuth }) => {
           {" "}
           The amount total for your booking is €{hourRate}
         </h2>
-        <button className="submit" type="submit" />
+        <button className="submit" type="submit">
+          Submit
+        </button>
       </form>
+      <div>
+        <img
+          className="booked"
+          src={mainImage}
+          alt={oneModel.image[1]}
+          width="400px"
+          height="auto"
+        />
+      </div>
     </section>
   );
 };

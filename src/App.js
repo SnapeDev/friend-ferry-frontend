@@ -7,73 +7,43 @@ import Signup from "./components/Signup";
 import Model from "./components/Model";
 import BookModel from "./components/BookModel";
 import Payment from "./components/Payment";
-
-const verifyToken = () => {
-  /* 
-  this function should send the token state to your backend
-  to a route that will:
-  1. verify with the token (with jwt.verify())
-  2. send the user back if the TOKEN is valid
-  3. set a state with the content of the user
-  4. set a state to reflect the user is logged in or our with true/false
-  const [isAuth, setIsAuth] = useState(false)
-  */
-};
+import Complete from "./components/Complete";
 
 function App() {
   const [user, setUser] = useState(null);
-  const [isAuth, setIsAuth] = useState(false);
-  const [token, setToken] = useState(localStorage.getItem("token"));
 
   useEffect(() => {
-    if (token) {
-      verifyToken();
-      setIsAuth(true);
+    if (!user) {
+      setUser(JSON.parse(localStorage.getItem("user")));
     }
-  }, [token]);
-
-  // useEffect(() => {
-  //   if (!token) {
-  //     setUser(JSON.parse(localStorage.getItem("user")));
-  //   }
-  // }, [user]);
-
-  const logout = () => {
-    setIsAuth(false);
-  };
+  }, [user]);
 
   return (
     <div className="App">
-      <Navbar user={user} isAuth={isAuth} setToken={setToken} logout={logout} />
+      <Navbar user={user} setUser={setUser} />
 
       <Routes>
         <Route path="/" element={<Home user={user} />} />
         <Route
           path="/login"
-          element={
-            !isAuth ? (
-              <Login setIsAuth={setIsAuth} setToken={setToken} />
-            ) : (
-              <Navigate to="/" />
-            )
-          }
+          element={!user ? <Login setUser={setUser} /> : <Navigate to="/" />}
         />
         <Route
           path="/signup"
-          element={
-            !isAuth ? <Signup setIsAuth={setIsAuth} /> : <Navigate to="/" />
-          }
+          element={!user ? <Signup setUser={setUser} /> : <Navigate to="/" />}
         />
         <Route
           path="auth"
-          element={!isAuth ? <Navigate to="/signup" /> : <Outlet />}
+          element={!user ? <Navigate to="/signup" /> : <Outlet />}
         />
         <Route path="/model/:id" element={<Model />} />
         <Route
           path="/model/:id/book-model"
-          element={<BookModel isAuth={isAuth} />}
+          element={<BookModel user={user} />}
         />
-        <Route path="/payment" element={<Payment />} />
+        <Route path="/payment" element={<Payment />}>
+          <Route path="complete" element={<Complete />} />
+        </Route>
       </Routes>
     </div>
   );

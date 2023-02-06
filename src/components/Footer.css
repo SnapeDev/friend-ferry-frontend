@@ -1,0 +1,39 @@
+.footer {
+  position: relative;
+  margin: 0px;
+  background-color: #f5f5f5;
+  padding: 0px;
+  height: 100px;
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  width: inherit;
+}
+
+.footer-content {
+  display: flex;
+
+  text-align: left;
+  margin: 10px;
+}
+
+.sub {
+  display: flex;
+  justify-content: space-around;
+  /* margin: 200px; */
+  width: 96vw;
+}
+
+.sub p {
+  margin: 5px;
+}
+
+@media screen and (max-width: 720px) {
+  .sub {
+    flex-direction: column;
+  }
+}
+
+.fa {
+  font-size: 40px;
+}
