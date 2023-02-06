@@ -1,6 +1,7 @@
 import React from "react";
-import { useParams, useState } from "react";
+import { useState } from "react";
 import { SliderData } from "./SliderData";
+import { useParams } from "react-router-dom";
 
 export default function Complete() {
   const { id } = useParams();

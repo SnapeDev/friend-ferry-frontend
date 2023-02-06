@@ -1,8 +1,7 @@
-import { useNavigate } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import DatePicker from "react-datepicker";
 import moment from "moment";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { SliderData } from "./SliderData";
 
 // import { useForm } from "react-hook-form";
