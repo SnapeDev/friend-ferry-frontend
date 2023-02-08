@@ -11,12 +11,23 @@ import Complete from "./components/Complete";
 
 function App() {
   const [user, setUser] = useState(null);
+  // const [modelId, setModelId] = useState();
 
   useEffect(() => {
     if (!user) {
       setUser(JSON.parse(localStorage.getItem("user")));
     }
   }, [user]);
+
+  const [booking, setBooking] = useState({
+    name: "",
+    event: "",
+    location: "",
+    datetime: new Date(),
+    nbHours: 0,
+    amount: 0,
+    modelId: "",
+  });
 
   return (
     <div className="App">
@@ -39,11 +50,12 @@ function App() {
         <Route path="/model/:id" element={<Model />} />
         <Route
           path="/model/:id/book-model"
-          element={<BookModel user={user} />}
+          element={
+            <BookModel booking={booking} setBooking={setBooking} user={user} />
+          }
         />
-        <Route path="/payment" element={<Payment />}>
-          <Route path="complete" element={<Complete />} />
-        </Route>
+        <Route path="/model/:id/complete" element={<Complete />} />
+        <Route path="/payment" element={<Payment />} />
       </Routes>
     </div>
   );

@@ -1,5 +1,5 @@
 import { useLocation, Outlet } from "react-router-dom";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import Complete from "./Complete";
@@ -13,98 +13,169 @@ import {
 import { loadStripe } from "@stripe/stripe-js";
 import "./Payment.css";
 
-const Payment = () => {
-  const stripe = loadStripe(process.env.REACT_APP_STRIPE_PUBLIC_KEY);
+// const CREATE_PAYPENT_INTENT_ENDPOINT =
+//   "https://api.stripe.com/v1/payment_intents";
+
+const stripe = loadStripe(process.env.REACT_APP_STRIPE_PUBLIC_KEY);
+
+const Payment = ({ booking }) => {
+  const [clientSecret, setClientSecret] = useState("");
+  const { state } = useLocation();
+  // const { amount } = state;
+
+  // useEffect(() => {
+  //   const run = async () => {
+  //     const paymentIntentResponse = await fetch(
+  //       CREATE_PAYPENT_INTENT_ENDPOINT,
+  //       {
+  //         method: "POST",
+  //         body: JSON.stringify({
+  //           amount,
+  //           currency: "EUR",
+  //           statement_descriptor: "FRIEND FERRY",
+  //           payment_method_types: ["card"],
+  //         }),
+  //         headers: {
+  //           "Content-Type": "application/json",
+  //           Authorization:
+  //             "Basic " + btoa(process.env.REACT_APP_STRIPE_SECRET_KEY),
+  //         },
+  //       }
+  //     );
+  //     const { error, clientSecret } = await paymentIntentResponse.json();
+  //     if (error) {
+  //       console.error(error);
+  //       return;
+  //     }
+
+  //     setClientSecret(clientSecret);
+  //   };
+  //   run();
+  // });
+
   return (
-    <Elements stripe={stripe}>
-      <CheckoutForm />
+    <Elements stripe={stripe} /*options={{ clientSecret }}*/>
+      <CheckoutForm booking={booking} />
     </Elements>
   );
 };
-function CheckoutForm() {
-  const [clientSecret, setClientSecret] = useState("");
-  const [isPaymentLoading, setPaymentLoading] = useState(false);
+
+function CheckoutForm({ booking }) {
+  console.log("ID PASSED DOWN", booking);
   const stripe = useStripe();
-  const { state } = useLocation();
+  const [isPaymentLoading, setPaymentLoading] = useState(false);
   const [payComplete, setPayComplete] = useState(false);
+  const [cardDetails, setCardDetails] = useState("");
+
+  // const [clientSecret, setClientSecret] = useState("");
   const navigate = useNavigate();
 
   const elements = useElements();
+
+  // const handleSubmit = async (event) => {
+  //   event.preventDefault();
+
+  //   if (!stripe || !elements) {
+  //     return;
+  //   }
+
+  //   const { error } = await stripe.confirmPayment({
+  //     elements,
+  //     confirmParams: {
+  //       return_url: `${window.location.origin}/complete`,
+  //     },
+  //   });
+
+  //   if (error !== null) {
+  //     alert(`The payment failed\n Reason: ${error.message}`);
+  //     return;
+  //   }
+  // };
+
   const payMoney = async (e) => {
     e.preventDefault();
     if (!stripe || !elements) {
       return;
     }
     setPaymentLoading(true);
-    const clientSecret = setClientSecret(); //clientSecret goes below
-    const paymentResult = await stripe.confirmCardPayment(
-      `${process.env.REACT_APP_STRIPE_SECRET_KEY}`,
-      {
-        payment_method: {
-          card: elements.getElement(CardElement),
-          billing_details: {
-            name: "Jay Tea",
+    // const clientSecret = setClientSecret(); //clientSecret goes below
+    try {
+      const paymentResult = await stripe.confirmCardPayment(
+        `${process.env.REACT_APP_STRIPE_SECRET_KEY}`,
+        {
+          payment_method: {
+            card: elements.getElement(CardElement),
+            billing_details: {
+              name: "Jay Tea",
+            },
           },
-        },
+        }
+      );
+      setPaymentLoading(false);
+      if (paymentResult.error) {
+        alert(paymentResult.error.message);
+      } else {
+        if (paymentResult.paymentIntent.status === "succeeded") {
+          setPayComplete(true);
+          navigate("complete");
+          // alert("Success!");
+        }
       }
-    );
-    setPaymentLoading(false);
-    if (paymentResult.error) {
-      alert(paymentResult.error.message);
-    } else {
-      if (paymentResult.paymentIntent.status === "succeeded") {
-        setPayComplete(true);
-        navigate("complete");
-        // alert("Success!");
-      }
+    } catch (err) {
+      console.error("confirmCardPayment error", err);
+    } finally {
+      setPaymentLoading(false);
     }
   };
 
   return payComplete ? (
     <Outlet />
   ) : (
-    <div
-      style={{
-        padding: "18rem",
-      }}
-    >
-      <div
-        style={{
-          maxWidth: "300px",
-          margin: "0 auto",
-        }}
-      >
-        <form
-          style={{
-            display: "block",
-            width: "100%",
-          }}
-          onSubmit={payMoney}
-        >
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-            }}
-          >
-            <CardElement
-              className="card"
-              options={{
-                style: {
-                  base: {
-                    backgroundColor: "white",
-                  },
-                },
-              }}
-            />
-
-            <button className="pay-button" disabled={isPaymentLoading}>
-              {isPaymentLoading ? "Loading..." : "Pay"}
-            </button>
-          </div>
-        </form>
+    <div className="books">
+      <div className="booking">
+        <p> Booking details:</p>
+        <br />
+        <p>
+          <p className="salmon">Name:</p>
+          {booking.name}
+        </p>
+        <p>
+          {" "}
+          <p className="salmon">Location:</p>
+          {booking.location}
+        </p>
+        <p>
+          <p className="salmon">Event:</p>
+          {booking.event}
+        </p>
+        <p>
+          {" "}
+          <p className="salmon">Hours:</p>
+          {booking.nbHours}{" "}
+        </p>
+        <p>
+          {" "}
+          <p className="salmon">Amount</p>€{booking.amount}
+        </p>
       </div>
+      <form
+        style={{
+          width: "20vw",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
+        onSubmit={() => navigate(`/complete/${booking.id}`)}
+      >
+        <CardElement
+          className="card"
+          value={cardDetails}
+          onChange={(e) => setCardDetails(e.target.value)}
+        />
+        <button className="pay-button" disabled={isPaymentLoading}>
+          {isPaymentLoading ? "Loading..." : "Pay"}
+        </button>
+      </form>
     </div>
   );
 }
