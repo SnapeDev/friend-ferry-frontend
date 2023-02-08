@@ -367,3 +367,7 @@ export const SliderData = [
     image: [richImg, richtwoImg, richthreeImg, richfourImg],
   },
 ];
+
+export const findModelById = (id) => {
+  return SliderData.find((model) => model.id === parseInt(id));
+};

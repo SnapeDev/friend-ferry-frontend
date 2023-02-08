@@ -18,9 +18,7 @@ import "./Payment.css";
 
 const stripe = loadStripe(process.env.REACT_APP_STRIPE_PUBLIC_KEY);
 
-const Payment = ({ booking }) => {
-  const [clientSecret, setClientSecret] = useState("");
-  const { state } = useLocation();
+const Payment = () => {
   // const { amount } = state;
 
   // useEffect(() => {
@@ -55,13 +53,14 @@ const Payment = ({ booking }) => {
 
   return (
     <Elements stripe={stripe} /*options={{ clientSecret }}*/>
-      <CheckoutForm booking={booking} />
+      <CheckoutForm />
     </Elements>
   );
 };
 
-function CheckoutForm({ booking }) {
-  console.log("ID PASSED DOWN", booking);
+function CheckoutForm() {
+  const { state } = useLocation();
+  const { modelId } = state;
   const stripe = useStripe();
   const [isPaymentLoading, setPaymentLoading] = useState(false);
   const [payComplete, setPayComplete] = useState(false);
@@ -137,25 +136,25 @@ function CheckoutForm({ booking }) {
         <br />
         <p>
           <p className="salmon">Name:</p>
-          {booking.name}
+          {state.name}
         </p>
         <p>
           {" "}
           <p className="salmon">Location:</p>
-          {booking.location}
+          {state.location}
         </p>
         <p>
           <p className="salmon">Event:</p>
-          {booking.event}
+          {state.event}
         </p>
         <p>
           {" "}
           <p className="salmon">Hours:</p>
-          {booking.nbHours}{" "}
+          {state.nbHours}{" "}
         </p>
         <p>
           {" "}
-          <p className="salmon">Amount</p>€{booking.amount}
+          <p className="salmon">Amount</p>€{state.amount}
         </p>
       </div>
       <form
@@ -165,7 +164,7 @@ function CheckoutForm({ booking }) {
           flexDirection: "column",
           alignItems: "center",
         }}
-        onSubmit={() => navigate(`/complete/${booking.id}`)}
+        onSubmit={() => navigate(`/complete/${modelId}`)}
       >
         <CardElement
           className="card"

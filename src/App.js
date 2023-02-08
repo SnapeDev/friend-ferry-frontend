@@ -54,7 +54,7 @@ function App() {
             <BookModel booking={booking} setBooking={setBooking} user={user} />
           }
         />
-        <Route path="/model/:id/complete" element={<Complete />} />
+        <Route path="/complete/:id" element={<Complete />} />
         <Route path="/payment" element={<Payment />} />
       </Routes>
     </div>
