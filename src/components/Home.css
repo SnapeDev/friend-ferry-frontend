@@ -182,19 +182,24 @@ h1 {
 }
 
 .well {
-  text-shadow: 0.03em 0 rgb(70, 70, 70);
+  text-shadow: 0.01em 0 rgb(70, 70, 70);
 }
 
 .titleWrapper {
-  width: 35%;
+  width: 33%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue; */
+  text-shadow: 0.1px 0.1px rgb(113, 103, 103), 0 0 0.05em rgb(113, 103, 103),
+    0 0 0.05em rgb(113, 103, 103);
+}
+
+.ferry {
+  /* color: rgb(231, 62, 118); */
 }
 
 .titleWrapper h1 {
-  color: whitesmoke;
+  color: rgb(255, 255, 255);
   margin: 0 40% 30px 0;
   padding-left: 100px;
 }
@@ -209,6 +214,7 @@ h1 {
   width: 100vw;
   padding-right: 0px;
   margin: 10vh 0;
+  /* padding-left: 100px; */
 }
 
 .carouselWrapper {
@@ -523,4 +529,37 @@ input {
   justify-content: center;
   height: 100vh;
   align-items: center;
+}
+
+.completed {
+  display: flex;
+  width: 110vw;
+  height: 25vh;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.bookertee {
+  display: flex;
+  width: 100vw;
+  height: 40vh;
+  color: salmon;
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+}
+
+.congrats {
+  font-size: 25px;
+  padding-right: 30px;
+  /* font-weight: bold; */
+  width: 55vh;
+  padding-right: 30px;
+}
+
+.pchild {
+  padding-left: 100px;
 }

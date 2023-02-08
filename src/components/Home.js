@@ -10,10 +10,10 @@ const Home = () => {
         <div className="titleWrapper">
           <strong>
             <h1>
-              Welcome to Friend Ferry, where companionship and social
-              connections are just a click away. Our selection of local
-              companions are perfect for walks, dates, and social events. Join
-              us and make lasting memories today.
+              Welcome to <b className="ferry">friend ferry</b>, where
+              companionship and social connections are just a click away. Our
+              selection of local companions are perfect for walks, dates, and
+              social events. Join us and make lasting memories today.
             </h1>
           </strong>
           <Link to="./signup">

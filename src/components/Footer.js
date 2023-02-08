@@ -50,7 +50,7 @@ export default function Footer() {
               <b>Social links</b>
 
               <div>
-                <FontAwesomeIcon icon={faInstagram} size="2x" />
+                <FontAwesomeIcon icon={faInstagram} size="2x" padding="10px" />
                 <FontAwesomeIcon icon={faYoutube} size="2x" />
                 <FontAwesomeIcon icon={faTwitter} size="2x" />
               </div>
