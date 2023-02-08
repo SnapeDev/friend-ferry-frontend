@@ -1,6 +1,9 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
+// const backendUrl = "https://friend-ferry.onrender.com/users/login";
+const loginUrl = "https://friend-ferry.onrender.com/users/login";
+
 export default function Login({ setUser }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -14,14 +17,11 @@ export default function Login({ setUser }) {
     setIsLoading(true);
     setError(null);
 
-    const response = await fetch(
-      "https://friend-ferry.onrender.com/users/login",
-      {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, password }),
-      }
-    );
+    const response = await fetch(loginUrl, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email, password }),
+    });
 
     const data = await response.json();
 
@@ -34,6 +34,7 @@ export default function Login({ setUser }) {
       // localStorage.setItem("token", data.token);
       setIsLoading(false);
       setUser(data);
+      navigate("/");
     }
   };
 

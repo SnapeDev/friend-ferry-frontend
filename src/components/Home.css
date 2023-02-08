@@ -178,6 +178,7 @@ h1 {
   display: flex;
   justify-content: flex-end;
   margin-top: 80px;
+  text-shadow: 10px;
 }
 
 .well {
@@ -189,6 +190,7 @@ h1 {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  /* text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue; */
 }
 
 .titleWrapper h1 {
@@ -513,4 +515,12 @@ input {
   margin-top: 80px;
   margin-bottom: 5rem;
   padding-top: 100px;
+}
+
+.aboutsection {
+  display: flex;
+  font-size: 40px;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
 }

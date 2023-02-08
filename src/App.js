@@ -8,6 +8,7 @@ import Model from "./components/Model";
 import BookModel from "./components/BookModel";
 import Payment from "./components/Payment";
 import Complete from "./components/Complete";
+import { About } from "./About";
 
 function App() {
   const [user, setUser] = useState(null);
@@ -43,10 +44,13 @@ function App() {
           path="/signup"
           element={!user ? <Signup setUser={setUser} /> : <Navigate to="/" />}
         />
+
         <Route
           path="auth"
           element={!user ? <Navigate to="/signup" /> : <Outlet />}
         />
+        <Route path="about" element={<About />} />
+
         <Route path="/model/:id" element={<Model />} />
         <Route
           path="/model/:id/book-model"
@@ -54,6 +58,7 @@ function App() {
             <BookModel booking={booking} setBooking={setBooking} user={user} />
           }
         />
+
         <Route path="/complete/:id" element={<Complete />} />
         <Route path="/payment" element={<Payment />} />
       </Routes>
