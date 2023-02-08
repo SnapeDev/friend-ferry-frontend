@@ -59,8 +59,8 @@ function App() {
           }
         />
 
-        <Route path="/complete/:id" element={<Complete />} />
-        <Route path="/payment" element={<Payment />} />
+        <Route path="/complete/:id" element={<Complete booking={booking} />} />
+        <Route path="/payment" element={<Payment booking={booking} />} />
       </Routes>
     </div>
   );

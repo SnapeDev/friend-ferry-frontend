@@ -3,6 +3,7 @@
   flex-direction: column;
   position: fixed;
   width: 100vw;
+  z-index: 2;
 }
 
 .title {

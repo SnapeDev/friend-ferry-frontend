@@ -46,12 +46,16 @@ export default function Footer() {
               <p>Security</p>
               <p>Terms</p>
             </div>
-            <div>
+            <div className="social">
               <b>Social links</b>
 
               <div>
-                <FontAwesomeIcon icon={faInstagram} size="2x" padding="10px" />
-                <FontAwesomeIcon icon={faYoutube} size="2x" />
+                <FontAwesomeIcon icon={faInstagram} size="2x" />
+                <FontAwesomeIcon
+                  className="fontawe"
+                  icon={faYoutube}
+                  size="2x"
+                />
                 <FontAwesomeIcon icon={faTwitter} size="2x" />
               </div>
             </div>

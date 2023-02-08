@@ -24,6 +24,12 @@ const Home = () => {
 
       {/* search bar */}
       <section className="compan">
+        <h2 className="sliderhead">
+          {" "}
+          <i>
+            <b>companions</b>
+          </i>
+        </h2>
         <SimplyCarousel />
         {/* <PictureSlider />; */}
       </section>

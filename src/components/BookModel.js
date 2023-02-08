@@ -112,9 +112,9 @@ const BookModel = ({ user, booking, setBooking }) => {
               dateFormat="MMMM d, yyyy h:mm aa"
             />
           </label>
-        </div>
-        <div>
-          <label htmlFor="number-of-hours">
+          {/* </div>
+        <div> */}
+          <label className="hours" htmlFor="number-of-hours">
             <select
               value={booking.nbHours}
               name="nbHours"

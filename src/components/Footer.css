@@ -37,3 +37,13 @@
 .fa {
   font-size: 40px;
 }
+
+.fontawe {
+  margin: 0 15px;
+}
+
+.social {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

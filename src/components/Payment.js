@@ -18,7 +18,7 @@ import "./Payment.css";
 
 const stripe = loadStripe(process.env.REACT_APP_STRIPE_PUBLIC_KEY);
 
-const Payment = () => {
+const Payment = ({ booking }) => {
   // const { amount } = state;
 
   // useEffect(() => {
@@ -53,12 +53,12 @@ const Payment = () => {
 
   return (
     <Elements stripe={stripe} /*options={{ clientSecret }}*/>
-      <CheckoutForm />
+      <CheckoutForm booking={booking} />
     </Elements>
   );
 };
 
-function CheckoutForm() {
+function CheckoutForm({ booking }) {
   const { state } = useLocation();
   const { modelId } = state;
   const stripe = useStripe();
@@ -132,6 +132,32 @@ function CheckoutForm() {
   ) : (
     <div className="books">
       <div className="booking">
+        <div className="modelAboutTitles">
+          <p>Name:</p>
+          <br />
+          <p className="">Location:</p>
+          <br />
+
+          <p className="">Event:</p>
+          <br />
+          <p className="">Hours:</p>
+          <br />
+          <p className="">Amount:</p>
+        </div>
+        <div className="modelAboutContent">
+          <p>{state.name}</p>
+          <br />
+          <p>{state.location}</p>
+          <br />
+
+          <p>{state.event}</p>
+          <br />
+          <p>{state.nbHours}</p>
+          <br />
+          <p>€{state.amount}</p>
+        </div>
+      </div>
+      {/* <div className="booking">
         <p> Booking details:</p>
         <br />
         <p>
@@ -156,7 +182,7 @@ function CheckoutForm() {
           {" "}
           <p className="salmon">Amount</p>€{state.amount}
         </p>
-      </div>
+      </div> */}
       <form
         style={{
           width: "20vw",

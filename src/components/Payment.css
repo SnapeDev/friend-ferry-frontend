@@ -9,7 +9,7 @@
 }
 .pay-button {
   padding: 0.7rem 2rem;
-  width: 100%;
+  width: 60%;
   margin: 1rem 0;
   color: white;
   font-weight: bold;
@@ -42,9 +42,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
-  height: 50vw;
+
   font-size: 25px;
+  width: 100%;
+  height: 80vh;
+  justify-content: center;
 }
 
 .salmon {
