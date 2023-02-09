@@ -363,7 +363,7 @@ export const SliderData = [
         </b>
       </i>
     ),
-    location: "Texas",
+    location: "Florida",
     image: [richImg, richtwoImg, richthreeImg, richfourImg],
   },
 ];
