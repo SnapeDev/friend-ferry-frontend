@@ -337,7 +337,7 @@ export const SliderData = [
     name: "Pat",
     age: 34,
     id: 16,
-    events: "Coffee, Social events, Cocktails",
+    events: "Dinner, Social events, Cocktails",
     about: (
       <i>
         <b>
@@ -354,11 +354,11 @@ export const SliderData = [
     name: "Rich",
     age: 41,
     id: 18,
-    events: "Coffee, Social events, Cocktails",
+    events: "Hiking, Social events, Cocktails",
     about: (
       <i>
         <b>
-          "Rich based out of Texas enjoys horse racing, tea and cake, reading
+          "Rich based out of Texas enjoys Long walks, motorcycle riding, reading
           and going to social events."
         </b>
       </i>
