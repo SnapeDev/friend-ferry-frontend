@@ -27,9 +27,7 @@ const Home = () => {
         <h2 className="sliderhead">
           {" "}
           <i>
-            <strong>
-              <b>companions</b>
-            </strong>
+            <strong>{/* <b>companions</b> */}</strong>
           </i>
         </h2>
         <SimplyCarousel />
