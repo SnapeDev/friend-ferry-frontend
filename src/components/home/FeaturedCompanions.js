@@ -7,11 +7,11 @@ import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // import required modules
-import { EffectCoverflow, Pagination } from "swiper/modules";
+import { Navigation } from "swiper/modules";
 
 // Import Swiper styles
 import "swiper/css";
-import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 import { getCompanionImage } from "@/utils/supabase/images";
 
@@ -25,10 +25,30 @@ export default function FeaturedCompanions({
 				effect={"coverflow"}
 				grabCursor={true}
 				centeredSlides={false}
-				slidesPerView={"auto"}
+				slidesPerView={4}
 				pagination={true}
-				modules={[Pagination]}
-				className="w-full"
+				modules={[Navigation]}
+				className="w-full mx-8"
+				navigation={true}
+				breakpoints={{
+					// Default parameters
+					slidesPerView: 4,
+					// Responsive breakpoints
+					breakpoints: {
+						// when window width is >= 320px
+						320: {
+							slidesPerView: 2,
+						},
+						// when window width is >= 480px
+						480: {
+							slidesPerView: 3,
+						},
+						// when window width is >= 640px
+						640: {
+							slidesPerView: 4,
+						},
+					},
+				}}
 			>
 				{featuredCompanions.map((companion) => (
 					<SwiperSlide key={`featured-companion-${companion.id}`}>
