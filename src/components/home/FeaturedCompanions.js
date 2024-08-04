@@ -27,6 +27,7 @@ export default function FeaturedCompanions({
 				centeredSlides={false}
 				slidesPerView={4}
 				pagination={true}
+				loop={true}
 				modules={[Navigation]}
 				className="w-full mx-8"
 				navigation={true}

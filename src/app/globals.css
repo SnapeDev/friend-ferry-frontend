@@ -71,6 +71,7 @@
 	top: auto !important;
 	background: #000 !important;
 	border-radius: 100% !important;
+	opacity: 1 !important;
 }
 
 .swiper-button-prev {
@@ -83,6 +84,11 @@
 	top: 40px !important;
 	background: #000 !important;
 	border-radius: 100% !important;
+	opacity: 1 !important;
+}
+
+.swiper-button-disabled {
+	opacity: 1 !important;
 }
 
 .swiper-button-prev:after,
