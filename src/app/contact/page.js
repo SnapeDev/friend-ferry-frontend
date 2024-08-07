@@ -1,7 +1,7 @@
 export default function Contact() {
   return (
-    <div className="text-center pt-64">
-      <p className="text-xl">
+    <div className="text-center pt-48">
+      <p className="text-lg">
         <a href="mailto:admin@friendferry.com" className="text-primary">
           admin@friendferry.com
         </a>{" "}
