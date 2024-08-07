@@ -2,7 +2,7 @@ export default function About() {
   return (
     <div className="flex justify-center items-center min-h-screen bg-white">
       <div className="max-w-3xl text-center p-8">
-        <h1 className="text-5xl text-primary font-bold mb-8">friend ferry</h1>
+        <h1 className="text-4xl text-primary font-bold mb-8">friend ferry</h1>
         <p className="text-lg font-medium leading-relaxed">
           Friend Ferry is a unique online service dedicated to connecting women
           with trustworthy and respectful men in their area for enjoyable and
