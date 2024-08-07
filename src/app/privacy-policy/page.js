@@ -391,7 +391,7 @@ export default function PrivacyPolicy() {
         collected, we will deactivate the account and take reasonable measures
         to promptly delete such data from our records. If you become aware of
         any data we may have collected from children under age 18, please
-        contact us at jacksnape89@gmail.com.
+        contact us at admin@friendferry.com.
       </p>
 
       <h2 className="text-2xl font-bold mt-6 mb-4">
