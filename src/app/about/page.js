@@ -1,9 +1,9 @@
 export default function About() {
   return (
     <div className="flex justify-center items-center min-h-screen bg-gray-100">
-      <div className="max-w-3xl text-center p-8 bg-white rounded shadow-md">
-        <h1 className="text-6xl font-serif mb-6">About</h1>
-        <p className="text-xl font-sans leading-relaxed">
+      <div className="max-w-3xl text-center p-8">
+        <h1 className="text-4xl font-medium mb-6">About</h1>
+        <p className="text-lg font-medium leading-relaxed">
           Friend Ferry is a unique online service dedicated to connecting women
           with trustworthy and respectful men in their area for enjoyable and
           meaningful social interactions. Whether you need a friend to accompany
