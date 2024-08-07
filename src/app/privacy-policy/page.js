@@ -264,12 +264,7 @@ export default function PrivacyPolicy() {
         <li>
           <strong>Consent.</strong> We may process your information if you have
           given us permission (i.e. consent) to use your personal information
-          for a specific purpose. You can withdraw your consent at any time.
-          Learn more about{" "}
-          <a href="#" className="text-blue-600 hover:underline">
-            withdrawing your consent
-          </a>
-          .
+          for a specific purpose. You can withdraw your consent at any time. .
         </li>
         <li>
           <strong>Performance of a Contract.</strong> We may process your
@@ -432,11 +427,17 @@ export default function PrivacyPolicy() {
         If you are located in the EEA or UK and you believe we are unlawfully
         processing your personal information, you also have the right to
         complain to your{" "}
-        <a href="#" className="text-blue-600 hover:underline">
+        <a
+          href="https://ec.europa.eu/newsroom/article29/items/612080"
+          className="text-blue-600 hover:underline"
+        >
           Member State data protection authority
         </a>{" "}
         or{" "}
-        <a href="#" className="text-blue-600 hover:underline">
+        <a
+          href="https://ico.org.uk/make-a-complaint/data-protection-complaints/data-protection-complaints/"
+          className="text-blue-600 hover:underline"
+        >
           UK data protection authority
         </a>
         .
@@ -444,7 +445,10 @@ export default function PrivacyPolicy() {
 
       <p className="mb-4">
         If you are located in Switzerland, you may contact the{" "}
-        <a href="#" className="text-blue-600 hover:underline">
+        <a
+          href="https://www.edoeb.admin.ch/edoeb/en/home/deredoeb/kontakt/faq_beratung1.html"
+          className="text-blue-600 hover:underline"
+        >
           Federal Data Protection and Information Commissioner
         </a>
         .
