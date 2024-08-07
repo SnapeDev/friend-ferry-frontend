@@ -3,7 +3,6 @@ export default function About() {
     <div className="text-center pt-28">
       <h1>About</h1>
       <p>
-        {" "}
         Friend Ferry is a unique online service dedicated to connecting women
         with trustworthy and respectful men in their area for enjoyable and
         meaningful social interactions. Whether you need a friend to accompany
