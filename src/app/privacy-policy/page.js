@@ -84,11 +84,7 @@ export default function PrivacyPolicy() {
         </h2>
         <p className="mb-4">
           We may share information in specific situations and with specific
-          third parties. Learn more about{" "}
-          <a href="#" className="text-blue-600 hover:underline">
-            when and with whom we share your personal information
-          </a>
-          .
+          third parties. .
         </p>
 
         <h2 className="text-2xl font-bold mt-6 mb-4">
@@ -182,6 +178,303 @@ export default function PrivacyPolicy() {
           All personal information that you provide to us must be true,
           complete, and accurate, and you must notify us of any changes to such
           personal information.
+        </p>
+      </div>
+      <div className="p-6 max-w-4xl mx-auto text-left">
+        <h2 className="text-2xl font-bold mt-6 mb-4">
+          2. HOW DO WE PROCESS YOUR INFORMATION?
+        </h2>
+
+        <p className="italic mb-4">
+          <strong>In Short:</strong> We process your information to provide,
+          improve, and administer our Services, communicate with you, for
+          security and fraud prevention, and to comply with law. We may also
+          process your information for other purposes with your consent.
+        </p>
+
+        <p className="mb-4">
+          We process your personal information for a variety of reasons,
+          depending on how you interact with our Services, including:
+        </p>
+
+        <ul className="list-disc pl-5 mb-4">
+          <li>
+            <strong>
+              To facilitate account creation and authentication and otherwise
+              manage user accounts.
+            </strong>{" "}
+            We may process your information so you can create and log in to your
+            account, as well as keep your account in working order.
+          </li>
+          <li>
+            <strong>
+              To deliver and facilitate delivery of services to the user.
+            </strong>{" "}
+            We may process your information to provide you with the requested
+            service.
+          </li>
+          <li>
+            <strong>
+              To respond to user inquiries/offer support to users.
+            </strong>{" "}
+            We may process your information to respond to your inquiries and
+            solve any potential issues you might have with the requested
+            service.
+          </li>
+          <li>
+            <strong>To send administrative information to you.</strong> We may
+            process your information to send you details about our products and
+            services, changes to our terms and policies, and other similar
+            information.
+          </li>
+          <li>
+            <strong>To fulfil and manage your orders.</strong> We may process
+            your information to fulfil and manage your orders, payments,
+            returns, and exchanges made through the Services.
+          </li>
+          <li>
+            <strong>To protect our Services.</strong> We may process your
+            information as part of our efforts to keep our Services safe and
+            secure, including fraud monitoring and prevention.
+          </li>
+          <li>
+            <strong>
+              To save or protect an individual&apos;s vital interest.
+            </strong>{" "}
+            We may process your information when necessary to save or protect an
+            individual&apos;s vital interest, such as to prevent harm.
+          </li>
+        </ul>
+      </div>
+      <div className="p-6 max-w-4xl mx-auto text-left">
+        <h2 className="text-2xl font-bold mt-6 mb-4">
+          3. WHAT LEGAL BASES DO WE RELY ON TO PROCESS YOUR INFORMATION?
+        </h2>
+
+        <p className="italic mb-4">
+          <strong>In Short:</strong> We only process your personal information
+          when we believe it is necessary and we have a valid legal reason (i.e.
+          legal basis) to do so under applicable law, like with your consent, to
+          comply with laws, to provide you with services to enter into or
+          fulfill our contractual obligations, to protect your rights, or to
+          fulfill our legitimate business interests.
+        </p>
+
+        <p className="mb-4">
+          The General Data Protection Regulation (GDPR) and UK GDPR require us
+          to explain the valid legal bases we rely on in order to process your
+          personal information. As such, we may rely on the following legal
+          bases to process your personal information:
+        </p>
+
+        <ul className="list-disc pl-5 mb-4">
+          <li>
+            <strong>Consent.</strong> We may process your information if you
+            have given us permission (i.e. consent) to use your personal
+            information for a specific purpose. You can withdraw your consent at
+            any time. Learn more about{" "}
+            <a href="#" className="text-blue-600 hover:underline">
+              withdrawing your consent
+            </a>
+            .
+          </li>
+          <li>
+            <strong>Performance of a Contract.</strong> We may process your
+            personal information when we believe it is necessary to fulfill our
+            contractual obligations to you, including providing our Services or
+            at your request prior to entering into a contract with you.
+          </li>
+          <li>
+            <strong>Legitimate Interests.</strong> We may process your
+            information when we believe it is reasonably necessary to achieve
+            our legitimate business interests and those interests do not
+            outweigh your interests and fundamental rights and freedoms. For
+            example, we may process your personal information for some of the
+            purposes described in order to:
+            <ul className="list-disc pl-5 mb-4">
+              <li>Diagnose problems and/or prevent fraudulent activities</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Legal Obligations.</strong> We may process your information
+            where we believe it is necessary for compliance with our legal
+            obligations, such as to cooperate with a law enforcement body or
+            regulatory agency, exercise or defend our legal rights, or disclose
+            your information as evidence in litigation in which we are involved.
+          </li>
+          <li>
+            <strong>Vital Interests.</strong> We may process your information
+            where we believe it is necessary to protect your vital interests or
+            the vital interests of a third party, such as situations involving
+            potential threats to the safety of any person.
+          </li>
+        </ul>
+      </div>
+      <div className="p-6 max-w-4xl mx-auto text-left">
+        <h2 className="text-2xl font-bold mt-6 mb-4">
+          4. WHEN AND WITH WHOM DO WE SHARE YOUR PERSONAL INFORMATION?
+        </h2>
+
+        <p className="italic mb-4">
+          <strong>In Short:</strong> We may share information in specific
+          situations described in this section and/or with the following third
+          parties.
+        </p>
+
+        <p className="mb-4">
+          We may need to share your personal information in the following
+          situations:
+        </p>
+
+        <ul className="list-disc pl-5 mb-4">
+          <li>
+            <strong>Business Transfers.</strong> We may share or transfer your
+            information in connection with, or during negotiations of, any
+            merger, sale of company assets, financing, or acquisition of all or
+            a portion of our business to another company.
+          </li>
+        </ul>
+
+        <h2 className="text-2xl font-bold mt-6 mb-4">
+          5. HOW LONG DO WE KEEP YOUR INFORMATION?
+        </h2>
+
+        <p className="italic mb-4">
+          <strong>In Short:</strong> We keep your information for as long as
+          necessary to fulfill the purposes outlined in this privacy notice
+          unless otherwise required by law.
+        </p>
+
+        <p className="mb-4">
+          We will only keep your personal information for as long as it is
+          necessary for the purposes set out in this privacy notice, unless a
+          longer retention period is required or permitted by law (such as tax,
+          accounting, or other legal requirements). No purpose in this notice
+          will require us keeping your personal information for longer than the
+          period of time in which users have an account with us.
+        </p>
+
+        <p className="mb-4">
+          When we have no ongoing legitimate business need to process your
+          personal information, we will either delete or anonymise such
+          information, or, if this is not possible (for example, because your
+          personal information has been stored in backup archives), then we will
+          securely store your personal information and isolate it from any
+          further processing until deletion is possible.
+        </p>
+
+        <h2 className="text-2xl font-bold mt-6 mb-4">
+          6. HOW DO WE KEEP YOUR INFORMATION SAFE?
+        </h2>
+
+        <p className="italic mb-4">
+          <strong>In Short:</strong> We aim to protect your personal information
+          through a system of organisational and technical security measures.
+        </p>
+
+        <p className="mb-4">
+          We have implemented appropriate and reasonable technical and
+          organisational security measures designed to protect the security of
+          any personal information we process. However, despite our safeguards
+          and efforts to secure your information, no electronic transmission
+          over the Internet or information storage technology can be guaranteed
+          to be 100% secure, so we cannot promise or guarantee that hackers,
+          cybercriminals, or other unauthorised third parties will not be able
+          to defeat our security and improperly collect, access, steal, or
+          modify your information. Although we will do our best to protect your
+          personal information, transmission of personal information to and from
+          our Services is at your own risk. You should only access the Services
+          within a secure environment.
+        </p>
+      </div>
+      <div className="p-6 max-w-4xl mx-auto text-left">
+        <h2 className="text-2xl font-bold mt-6 mb-4">
+          7. DO WE COLLECT INFORMATION FROM MINORS?
+        </h2>
+
+        <p className="italic mb-4">
+          <strong>In Short:</strong> We do not knowingly collect data from or
+          market to children under 18 years of age.
+        </p>
+
+        <p className="mb-4">
+          We do not knowingly collect, solicit data from, or market to children
+          under 18 years of age, nor do we knowingly sell such personal
+          information. By using the Services, you represent that you are at
+          least 18 or that you are the parent or guardian of such a minor and
+          consent to such minor dependent&apos;s use of the Services. If we
+          learn that personal information from users less than 18 years of age
+          has been collected, we will deactivate the account and take reasonable
+          measures to promptly delete such data from our records. If you become
+          aware of any data we may have collected from children under age 18,
+          please contact us at jacksnape89@gmail.com.
+        </p>
+
+        <h2 className="text-2xl font-bold mt-6 mb-4">
+          8. WHAT ARE YOUR PRIVACY RIGHTS?
+        </h2>
+
+        <p className="italic mb-4">
+          <strong>In Short:</strong> In some regions, such as the European
+          Economic Area (EEA), United Kingdom (UK), and Switzerland, you have
+          rights that allow you greater access to and control over your personal
+          information. You may review, change, or terminate your account at any
+          time, depending on your country, province, or state of residence.
+        </p>
+
+        <p className="mb-4">
+          In some regions (like the EEA, UK, and Switzerland), you have certain
+          rights under applicable data protection laws. These may include the
+          right (i) to request access and obtain a copy of your personal
+          information, (ii) to request rectification or erasure; (iii) to
+          restrict the processing of your personal information; (iv) if
+          applicable, to data portability; and (v) not to be subject to
+          automated decision-making. In certain circumstances, you may also have
+          the right to object to the processing of your personal information.
+          You can make such a request by contacting us by using the contact
+          details provided on this page.
+        </p>
+
+        <p className="mb-4">
+          We will consider and act upon any request in accordance with
+          applicable data protection laws.
+        </p>
+
+        <p className="mb-4">
+          If you are located in the EEA or UK and you believe we are unlawfully
+          processing your personal information, you also have the right to
+          complain to your{" "}
+          <a href="#" className="text-blue-600 hover:underline">
+            Member State data protection authority
+          </a>{" "}
+          or{" "}
+          <a href="#" className="text-blue-600 hover:underline">
+            UK data protection authority
+          </a>
+          .
+        </p>
+
+        <p className="mb-4">
+          If you are located in Switzerland, you may contact the{" "}
+          <a href="#" className="text-blue-600 hover:underline">
+            Federal Data Protection and Information Commissioner
+          </a>
+          .
+        </p>
+
+        <p className="mb-4">
+          <strong>Withdrawing your consent:</strong> If we are relying on your
+          consent to process your personal information, you have the right to
+          withdraw your consent at any time. You can withdraw your consent at
+          any time by contacting us by using the contact details provided on
+          this page.
+        </p>
+
+        <p className="mb-4">
+          However, please note that this will not affect the lawfulness of the
+          processing before its withdrawal nor will it affect the processing of
+          your personal information conducted in reliance on lawful processing
+          grounds other than consent.
         </p>
       </div>
     </div>
