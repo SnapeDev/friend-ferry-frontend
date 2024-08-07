@@ -36,7 +36,7 @@ export default function PrivacyPolicy() {
         policies and practices, please do not use our Services. If you still
         have any questions or concerns, please contact us at{" "}
         <a
-          href="mailto:jacksnape89@gmail.com"
+          href="mailto:admin@friendferry.com"
           className="text-blue-600 hover:underline"
         >
           jacksnape89@gmail.com
@@ -59,9 +59,6 @@ export default function PrivacyPolicy() {
           visit, use, or navigate our Services, we may process personal
           information depending on how you interact with us and the Services,
           the choices you make, and the products and features you use.{" "}
-          <a href="#personal-info" className="text-blue-600 hover:underline">
-            Learn more about personal information you disclose to us.
-          </a>
         </li>
         <li>
           <strong>Do we process any sensitive personal information?</strong> We
@@ -78,9 +75,6 @@ export default function PrivacyPolicy() {
           with law. We may also process your information for other purposes with
           your consent. We process your information only when we have a valid
           legal reason to do so.{" "}
-          <a href="#how-we-process" className="text-blue-600 hover:underline">
-            Learn more about how we process your information.
-          </a>
         </li>
       </ul>
     </div>
