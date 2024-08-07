@@ -4,21 +4,29 @@ import { useEffect } from "react";
 
 export default function PrivacyPolicy() {
   useEffect(() => {
-    const script = document.createElement("script");
-    script.id = "termly-jssdk";
-    script.src = "https://app.termly.io/embed-policy.min.js";
-    script.async = true;
+    const scriptId = "termly-jssdk";
 
-    document.body.appendChild(script);
+    // Check if the script is already added
+    if (!document.getElementById(scriptId)) {
+      const script = document.createElement("script");
+      script.id = scriptId;
+      script.src = "https://app.termly.io/embed-policy.min.js";
+      script.async = true;
 
+      document.body.appendChild(script);
+    }
+
+    // Cleanup function to remove the script if the component unmounts
     return () => {
-      document.body.removeChild(script);
+      const script = document.getElementById(scriptId);
+      if (script) {
+        document.body.removeChild(script);
+      }
     };
   }, []);
 
   return (
     <div className="text-center pt-28">
-      <h1>Privacy Policy</h1>
       <div
         name="termly-embed"
         data-id="2af0c5c8-cdab-40bf-8ed7-7b53eb40c695"
