@@ -1,10 +1,13 @@
-export default function PrivacyPolicy() {
+export default function Contact() {
   return (
     <div className="text-center pt-28">
-      <h1>Privacy Policy</h1>
-      <p>
-        admin@friendferry.com <br></br>
+      <p className="text-medium">
+        <a href="mailto:admin@friendferry.com" className="text-primary">
+          admin@friendferry.com
+        </a>{" "}
         <br></br>
+        <br></br>
+        Friend Ferry Ltd<br></br>
         71-75 Shelton Street<br></br>
         Covent Garden<br></br>
         WC2H 9JQ<br></br>
