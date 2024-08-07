@@ -477,6 +477,107 @@ export default function PrivacyPolicy() {
           grounds other than consent.
         </p>
       </div>
+      <div className="p-6 max-w-4xl mx-auto text-left">
+        <h2 className="text-2xl font-bold mt-6 mb-4">Account Information</h2>
+
+        <p className="mb-4">
+          If you would at any time like to review or change the information in
+          your account or terminate your account, you can:
+        </p>
+
+        <ul className="list-disc pl-5 mb-4">
+          <li>Contact us using the contact information provided.</li>
+        </ul>
+
+        <p className="mb-4">
+          Upon your request to terminate your account, we will deactivate or
+          delete your account and information from our active databases.
+          However, we may retain some information in our files to prevent fraud,
+          troubleshoot problems, assist with any investigations, enforce our
+          legal terms and/or comply with applicable legal requirements.
+        </p>
+
+        <p className="mb-4">
+          If you have questions or comments about your privacy rights, you may
+          email us at admin@friendferry.com.
+        </p>
+
+        <h2 className="text-2xl font-bold mt-6 mb-4">
+          9. CONTROLS FOR DO-NOT-TRACK FEATURES
+        </h2>
+
+        <p className="mb-4">
+          Most web browsers and some mobile operating systems and mobile
+          applications include a Do-Not-Track (&apos;DNT&apos;) feature or
+          setting you can activate to signal your privacy preference not to have
+          data about your online browsing activities monitored and collected. At
+          this stage, no uniform technology standard for recognizing and
+          implementing DNT signals has been finalized. As such, we do not
+          currently respond to DNT browser signals or any other mechanism that
+          automatically communicates your choice not to be tracked online. If a
+          standard for online tracking is adopted that we must follow in the
+          future, we will inform you about that practice in a revised version of
+          this privacy notice.
+        </p>
+
+        <h2 className="text-2xl font-bold mt-6 mb-4">
+          10. DO WE MAKE UPDATES TO THIS NOTICE?
+        </h2>
+
+        <p className="italic mb-4">
+          <strong>In Short:</strong> Yes, we will update this notice as
+          necessary to stay compliant with relevant laws.
+        </p>
+
+        <p className="mb-4">
+          We may update this privacy notice from time to time. The updated
+          version will be indicated by an updated 'Revised' date at the top of
+          this privacy notice. If we make material changes to this privacy
+          notice, we may notify you either by prominently posting a notice of
+          such changes or by directly sending you a notification. We encourage
+          you to review this privacy notice frequently to be informed of how we
+          are protecting your information.
+        </p>
+      </div>
+
+      <div className="p-6 max-w-4xl mx-auto text-left">
+        <h2 className="text-2xl font-bold mt-6 mb-4">
+          11. HOW CAN YOU CONTACT US ABOUT THIS NOTICE?
+        </h2>
+
+        <p className="mb-4">
+          If you have questions or comments about this notice, you may email us
+          at admin@friendferry.com or contact us by post at:
+        </p>
+
+        <p className="mb-4">
+          Friend Ferry ltd
+          <br />
+          71-75 Shelton Street
+          <br />
+          Covent Garden
+          <br />
+          London WC2H 9JQ
+          <br />
+          England
+        </p>
+
+        <h2 className="text-2xl font-bold mt-6 mb-4">
+          12. HOW CAN YOU REVIEW, UPDATE, OR DELETE THE DATA WE COLLECT FROM
+          YOU?
+        </h2>
+
+        <p className="mb-4">
+          Based on the applicable laws of your country, you may have the right
+          to request access to the personal information we collect from you,
+          details about how we have processed it, correct inaccuracies, or
+          delete your personal information. You may also have the right to
+          withdraw your consent to our processing of your personal information.
+          These rights may be limited in some circumstances by applicable law.
+          To request to review, update, or delete your personal information,
+          please submit a request by contacting us at admin@friendferry.com
+        </p>
+      </div>
     </div>
   );
 }
