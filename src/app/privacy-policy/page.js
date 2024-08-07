@@ -5,10 +5,10 @@ export default function PrivacyPolicy() {
       <p>Last updated August 07, 2024</p>
 
       <p>
-        This privacy notice for Friend Ferry ltd ('we', 'us', or 'our'),
-        describes how and why we might collect, store, use, and/or share
-        ('process') your information when you use our services ('Services'),
-        such as when you:
+        This privacy notice for Friend Ferry ltd (&apos;we&apos;,
+        &apos;us&apos;, or &apos;our&apos;), describes how and why we might
+        collect, store, use, and/or share (&apos;process&apos;) your information
+        when you use our services (&apos;Services&apos;), such as when you:
       </p>
 
       <ul>
