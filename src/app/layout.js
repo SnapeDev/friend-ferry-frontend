@@ -66,6 +66,7 @@ export default async function RootLayout({ children }) {
               <div className="flex flex-col text-sm font-medium">
                 <Link href="/signup">Sign Up</Link>
                 <Link href="/login">Log In</Link>
+                <Link href="/contact">Contact</Link>
               </div>
 
               <div className="flex flex-col mt-6 md:mt-0">
