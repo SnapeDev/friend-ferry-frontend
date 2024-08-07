@@ -26,7 +26,7 @@ export default function PrivacyPolicy() {
   }, []);
 
   return (
-    <div className="text-center pt-28">
+    <div className="text-center pt-20">
       <div
         name="termly-embed"
         data-id="2af0c5c8-cdab-40bf-8ed7-7b53eb40c695"
