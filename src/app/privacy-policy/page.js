@@ -531,12 +531,12 @@ export default function PrivacyPolicy() {
 
         <p className="mb-4">
           We may update this privacy notice from time to time. The updated
-          version will be indicated by an updated 'Revised' date at the top of
-          this privacy notice. If we make material changes to this privacy
-          notice, we may notify you either by prominently posting a notice of
-          such changes or by directly sending you a notification. We encourage
-          you to review this privacy notice frequently to be informed of how we
-          are protecting your information.
+          version will be indicated by an updated &apos;Revised&apos; date at
+          the top of this privacy notice. If we make material changes to this
+          privacy notice, we may notify you either by prominently posting a
+          notice of such changes or by directly sending you a notification. We
+          encourage you to review this privacy notice frequently to be informed
+          of how we are protecting your information.
         </p>
       </div>
 
