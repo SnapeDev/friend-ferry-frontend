@@ -1,14 +1,14 @@
 import { supabaseAdminClient } from "@/utils/supabase/admin";
 
 export async function GET() {
-	const { data, error } = await supabaseAdminClient
-		.from("companions")
-		.select("*")
-		.order("score", { ascending: false })
-		.limit(6);
+  const { data, error } = await supabaseAdminClient
+    .from("companions")
+    .select("*")
+    .order("score", { ascending: false })
+    .limit(10);
 
-	if (error) {
-		return Response.error({ error });
-	}
-	return Response.json({ data });
+  if (error) {
+    return Response.error({ error });
+  }
+  return Response.json({ data });
 }
