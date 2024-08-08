@@ -68,6 +68,10 @@
 // import richfourImg from "./Richfour.jpg";
 import instaImg from "./insta.jpg";
 import placeholderImg from "./Placeholder.jpg";
+import mikeImg from "./Mike.jpg";
+import miketwoImg from "./Miketwo.jpg";
+import mikethreeImg from "./Mikethree.jpg";
+import mikefourImg from "./Mikefour.jpg";
 
 export {
   // baptisteImg,
@@ -138,6 +142,10 @@ export {
   // richtwoImg,
   // richthreeImg,
   // richfourImg,
+  mikeImg,
+  miketwoImg,
+  mikethreeImg,
+  mikefourImg,
   instaImg,
   placeholderImg,
 };
