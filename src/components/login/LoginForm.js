@@ -1,12 +1,13 @@
 "use client";
 
-import { NEXT_PUBLIC_APPLICATION_URL } from "@/utils/server-constants";
 import { useSupabase } from "@/contexts/Supabase";
 
 import Input from "@/components/generics/Input";
+import { POST } from "@/app/api/auth/login/route";
 
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+
 export default function LoginForm() {
 	const router = useRouter();
 	const { setData } = useSupabase();
@@ -31,24 +32,16 @@ export default function LoginForm() {
 			return;
 		}
 
-		const response = await fetch(
-			`${NEXT_PUBLIC_APPLICATION_URL}/api/auth/login`,
-			{
-				method: "POST",
-				body: JSON.stringify(form),
-				cache: "no-store",
-			}
-		);
-
+		const response = await POST(form)
 		if (response.ok) {
 			const {
-				data: { session },
-			} = await response.json();
+        data: { session }
+      } = response;
 			setData(session);
 
 			router.push("/companions");
 		} else {
-			alert("An error occurred");
+			alert("An error occurred: " + response.error);
 		}
 	}
 

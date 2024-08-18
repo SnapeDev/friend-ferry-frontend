@@ -20,6 +20,9 @@ export const metadata = {
 export default async function RootLayout({ children }) {
 	return (
 		<html lang="en">
+			<head>
+				<link rel="icon" href="/friend ferry.ico" />
+			</head>
 			<SupabaseProvider>
 				<body className={roboto.className}>
 					<header className="px-4 md:px-8 py-4 shadow fixed top-0 left-0 right-0 z-50 bg-white/90 ">
