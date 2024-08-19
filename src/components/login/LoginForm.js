@@ -5,11 +5,12 @@ import { useSupabase } from "@/contexts/Supabase";
 import Input from "@/components/generics/Input";
 import { POST } from "@/app/api/auth/login/route";
 
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { useState } from "react";
 
 export default function LoginForm() {
 	const router = useRouter();
+	const searchParams = useSearchParams()
 	const { setData } = useSupabase();
 
 	const [form, setForm] = useState({
@@ -35,11 +36,18 @@ export default function LoginForm() {
 		const response = await POST(form)
 		if (response.ok) {
 			const {
-        data: { session }
-      } = response;
+				data: { session }
+			} = response;
 			setData(session);
 
-			router.push("/companions");
+			const nextPath = searchParams.get('nextPath');
+			const formattedPath = decodeURIComponent('/' + nextPath.replace(/^\//, ''));
+
+			if (nextPath && !nextPath.startsWith('http') && !nextPath.startsWith('//')) {
+				router.push(formattedPath);
+			} else {
+				router.push("/companions");
+			}
 		} else {
 			alert("An error occurred: " + response.error);
 		}
