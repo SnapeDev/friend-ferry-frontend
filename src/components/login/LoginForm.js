@@ -5,12 +5,11 @@ import { useSupabase } from "@/contexts/Supabase";
 import Input from "@/components/generics/Input";
 import { POST } from "@/app/api/auth/login/route";
 
-import { useRouter, useSearchParams } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 export default function LoginForm() {
 	const router = useRouter();
-	const searchParams = useSearchParams()
 	const { setData } = useSupabase();
 
 	const [form, setForm] = useState({
@@ -40,6 +39,7 @@ export default function LoginForm() {
 			} = response;
 			setData(session);
 
+			const searchParams = new URLSearchParams(window.location.search);
 			const nextPath = searchParams.get('nextPath');
 			const formattedPath = decodeURIComponent('/' + nextPath.replace(/^\//, ''));
 
