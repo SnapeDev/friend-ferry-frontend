@@ -35,11 +35,19 @@ export default function LoginForm() {
 		const response = await POST(form)
 		if (response.ok) {
 			const {
-        data: { session }
-      } = response;
+				data: { session }
+			} = response;
 			setData(session);
 
-			router.push("/companions");
+			const searchParams = new URLSearchParams(window.location.search);
+			const nextPath = searchParams.get('nextPath');
+			const formattedPath = decodeURIComponent('/' + nextPath.replace(/^\//, ''));
+
+			if (nextPath && !nextPath.startsWith('http') && !nextPath.startsWith('//')) {
+				router.push(formattedPath);
+			} else {
+				router.push("/companions");
+			}
 		} else {
 			alert("An error occurred: " + response.error);
 		}

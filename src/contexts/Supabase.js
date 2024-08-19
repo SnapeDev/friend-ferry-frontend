@@ -17,9 +17,10 @@ export function SupabaseProvider({ children }) {
 
 	async function signOut() {
 		await supabase.auth.signOut({ scope: "local" });
-		router.push("/login");
+
 		setData({});
 		setError(null);
+		router.refresh(); // if we are in "protected" route, then it will auto-redirect to "/login"
 	}
 
 	useEffect(() => {
