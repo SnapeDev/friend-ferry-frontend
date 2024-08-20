@@ -41,9 +41,9 @@ export default function LoginForm() {
 
 			const searchParams = new URLSearchParams(window.location.search);
 			const nextPath = searchParams.get('nextPath');
-			const formattedPath = decodeURIComponent('/' + nextPath.replace(/^\//, ''));
 
 			if (nextPath && !nextPath.startsWith('http') && !nextPath.startsWith('//')) {
+				const formattedPath = decodeURIComponent('/' + nextPath.replace(/^\//, ''));
 				router.push(formattedPath);
 			} else {
 				router.push("/companions");
