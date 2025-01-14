@@ -36,21 +36,30 @@ export async function updateSession(request) {
 		data: { user },
 	} = await supabase.auth.getUser();
 
-	if (!user && request.nextUrl.pathname.startsWith("/book")) {
-		// no user, potentially respond by redirecting the user to the login page
-		const url = request.nextUrl.clone();
-		url.pathname = "/login";
-		return NextResponse.redirect(url);
-	} else if (
-		user &&
-		(request.nextUrl.pathname.startsWith("/login") ||
-			request.nextUrl.pathname.startsWith("/signup"))
-	) {
-		// user is logged in, potentially respond by redirecting the user to the home page
-		const url = request.nextUrl.clone();
-		url.pathname = "/companions";
-		return NextResponse.redirect(url);
-	}
+  if (!user && request.nextUrl.pathname.startsWith("/book")) {
+    const url = request.nextUrl.clone();
+    const nextPathNameWithoutPossibleLeadingSlash = request.nextUrl.pathname.replace(/^\//, '')
+    url.pathname = "/login";
+    url.searchParams.set("nextPath", nextPathNameWithoutPossibleLeadingSlash);
+
+    return NextResponse.redirect(url);
+  } else if (
+    user &&
+    (request.nextUrl.pathname.startsWith("/login") ||
+      request.nextUrl.pathname.startsWith("/signup"))
+  ) {
+    // user is logged in, potentially respond by redirecting the user to the home page
+    const url = request.nextUrl.clone();
+
+    const nextPath = url.searchParams.get("nextPath");
+    if (nextPath && !nextPath.startsWith('http') && !nextPath.startsWith('//')) {
+      url.pathname = `/${nextPath.replace(/^\//, '')}`;
+			url.searchParams.delete('nextPath');
+    } else {
+      url.pathname = "/companions";
+    }
+    return NextResponse.redirect(url);
+  }
 
 	// IMPORTANT: You *must* return the supabaseResponse object as it is. If you're
 	// creating a new response object with NextResponse.next() make sure to:

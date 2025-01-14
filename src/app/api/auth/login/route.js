@@ -3,8 +3,7 @@
 import { createServerClient } from "@/utils/supabase/server";
 
 export async function POST(request) {
-	const body = await request.json();
-	const { email, password } = body;
+	const { email, password } = request;
 
 	const supabase = createServerClient();
 
@@ -18,9 +17,13 @@ export async function POST(request) {
 	const { data, error } = await supabase.auth.signInWithPassword(credentials);
 
 	if (error) {
-		console.error(error);
-		return Response.error({ error });
+		return {
+			error: error.message,
+		}
 	}
 
-	return Response.json({ data });
+	return {
+		ok: true,
+		data,
+	}
 }
